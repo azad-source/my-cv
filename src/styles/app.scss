@@ -1,6 +1,6 @@
-@import './font.scss';
-@import 'src/styles/colors.scss';
-@import 'src/styles/default.scss';
+@import "./font.scss";
+@import "src/styles/colors.scss";
+@import "src/styles/default.scss";
 
 body,
 html {
@@ -12,7 +12,7 @@ html {
   font-size: 16px;
   line-height: 1.5;
   font-weight: normal;
-  font-family: 'NotoSansJP-Regular', sans-serif;
+  font-family: "Josefin-Sans-Regular", sans-serif;
 }
 
 #root {
@@ -85,7 +85,7 @@ h1 {
   font-size: 2.5rem;
   border-bottom: 1px solid $second-color;
   padding: 5px 0;
-  font-family: 'NotoSansJP-Bold', sans-serif;
+  font-family: "Josefin-Sans-Bold", sans-serif;
   font-weight: normal;
   @media screen and (map-get($breakpoints, mobile)) {
     font-size: 2rem;
@@ -106,7 +106,7 @@ h2 {
   padding: 20px 0;
   border-bottom: 2px solid $second-color;
   margin-bottom: 30px;
-  font-family: 'NotoSansJP-Bold', sans-serif;
+  font-family: "Josefin-Sans-Bold", sans-serif;
   font-weight: normal;
   @media screen and (map-get($breakpoints, mobile)) {
     font-size: 1.5rem;
@@ -115,7 +115,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'NotoSansJP-Bold', sans-serif;
+  font-family: "Josefin-Sans-Bold", sans-serif;
   font-weight: normal;
   @media screen and (map-get($breakpoints, laptop)) {
     font-size: 1rem;
@@ -130,7 +130,7 @@ h4 {
   padding-bottom: 10px;
   border-bottom: 1px solid #e9e9e9;
   margin-bottom: 30px;
-  font-family: 'NotoSansJP-Bold', sans-serif;
+  font-family: "Josefin-Sans-Bold", sans-serif;
   font-weight: normal;
 }
 

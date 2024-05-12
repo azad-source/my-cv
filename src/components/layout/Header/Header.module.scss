@@ -1,5 +1,5 @@
-@import 'src/styles/colors.scss';
-@import 'src/styles/default.scss';
+@import "src/styles/colors.scss";
+@import "src/styles/default.scss";
 
 .root {
   width: 100%;
@@ -33,7 +33,7 @@
           text-align: center;
           color: $main-text-color;
           font-weight: normal;
-          font-family: 'NotoSansJP-Bold', sans-serif;
+          font-family: "Josefin-Sans-Bold", sans-serif;
           text-decoration: none;
           padding: 25px 0;
         }
