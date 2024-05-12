@@ -1,0 +1,49 @@
+@import 'src/styles/colors.scss';
+@import 'src/styles/default.scss';
+
+.root {
+  display: block;
+  position: fixed;
+  bottom: 80px;
+  right: 60px;
+  z-index: 9999;
+  padding: 15px 20px;
+  text-align: center;
+  line-height: 1;
+  background: $main-text-color;
+  cursor: pointer;
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+
+  .icon {
+    font-size: 28px;
+    color: #444;
+  }
+
+  &:hover {
+    background: #e9ebec;
+  }
+}
+
+@media screen and (map-get($breakpoints, desktop)) {
+  .root {
+    background-color: rgba(125, 125, 125, 0.8);
+
+    .icon {
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (map-get($breakpoints, tablet)) {
+  .root {
+    right: 20px;
+    bottom: 40px;
+    background-color: rgba(125, 125, 125, 0.5);
+
+    &:hover {
+      background-color: rgba(125, 125, 125, 0.5);
+    }
+  }
+}

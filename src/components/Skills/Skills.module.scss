@@ -1,0 +1,130 @@
+@import 'src/styles/colors.scss';
+@import 'src/styles/default.scss';
+
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+
+  .block {
+    width: 30%;
+    background-color: $main-color;
+    padding: 20px;
+    animation-name: skill_section;
+    animation-duration: 0.3s;
+  }
+}
+
+.stackList {
+  display: grid;
+  grid-template-columns: repeat(17, 1fr);
+  align-items: center;
+  margin-bottom: 10px;
+  background: #333;
+
+  .stackItem {
+    overflow: hidden;
+    padding: 15px;
+
+    &_img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.item {
+  position: relative;
+  color: $main-text-color;
+  letter-spacing: 1px;
+  height: 35px;
+  margin-bottom: 25px;
+  animation-name: skill_section;
+  animation-duration: 1s;
+
+  &__title {
+    &__percent {
+      opacity: 0.4;
+      font-size: 0.8em;
+      margin-right: 10px;
+    }
+  }
+
+  &__max {
+    width: 100%;
+    background-color: #e9e9e9;
+  }
+
+  &__max,
+  &__current {
+    height: 5px;
+    bottom: 0;
+    left: 0;
+
+    &__inner {
+      background-color: $second-color;
+      width: 100%;
+      height: 100%;
+      animation-name: skill_animation;
+      animation-duration: 2s;
+    }
+  }
+
+  &__current {
+    background-color: transparent;
+  }
+}
+
+.item > div {
+  position: absolute;
+}
+
+@media screen and (map-get($breakpoints, tablet)) {
+  .root {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .block {
+      width: 48%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .stackList {
+    grid-template-columns: repeat(8, 1fr);
+
+    .stackItem {
+      padding: 20px;
+    }
+  }
+}
+
+@media screen and (map-get($breakpoints, mobile)) {
+  .root {
+    padding: 0 10px;
+
+    .block {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .stackList {
+    grid-template-columns: repeat(6, 1fr);
+    background-color: unset;
+
+    .stackItem {
+      padding: 5px 12px;
+    }
+  }
+}
+
+@media screen and (map-get($breakpoints, s-mobile)) {
+  .root {
+    padding: 0;
+  }
+}

@@ -1,0 +1,35 @@
+@import 'src/styles/colors.scss';
+@import 'src/styles/default.scss';
+
+.root {
+  width: 100%;
+  margin: 60px auto;
+  box-shadow: 0 0 12px 2px rgb(0 0 0 / 30%);
+  min-height: 600px;
+  background-color: $page-bg-color;
+  padding: 0 #{map-get($contentSideGap, max)} 50px;
+
+  @media screen and (map-get($breakpoints, desktop)) {
+    width: 94%;
+    padding-left: #{map-get($contentSideGap, medium)};
+    padding-right: #{map-get($contentSideGap, medium)};
+  }
+
+  @media screen and (map-get($breakpoints, tablet)) {
+    padding-left: #{map-get($contentSideGap, small)};
+    padding-right: #{map-get($contentSideGap, small)};
+  }
+
+  @media screen and (map-get($breakpoints, mobile)) {
+    margin: 30px auto;
+  }
+
+  @media screen and (map-get($breakpoints, s-mobile)) {
+    padding-left: #{map-get($contentSideGap, x-small)};
+    padding-right: #{map-get($contentSideGap, x-small)};
+  }
+
+  @media screen and (map-get($breakpoints, xs-mobile)) {
+    width: 98%;
+  }
+}

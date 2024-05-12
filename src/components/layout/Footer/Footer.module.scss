@@ -1,0 +1,27 @@
+@import 'src/styles/colors.scss';
+@import 'src/styles/default.scss';
+
+.root {
+  width: 100%;
+  background-color: $main-color;
+  box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.3);
+  padding: 40px 20px;
+  color: $main-text-color;
+  align-self: end;
+
+  .copyright {
+    text-align: center;
+    width: 100%;
+    letter-spacing: 2px;
+
+    @media screen and (map-get($breakpoints, s-mobile)) {
+      footer .copyright {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  @media screen and (map-get($breakpoints, s-mobile)) {
+    padding: 20px 15px;
+  }
+}

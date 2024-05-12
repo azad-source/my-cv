@@ -1,0 +1,158 @@
+@import 'src/styles/colors.scss';
+@import 'src/styles/default.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .block_1 {
+    height: 280px;
+    background-color: $main-color;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    margin-left: -#{map-get($contentSideGap, max)};
+    margin-right: -#{map-get($contentSideGap, max)};
+
+    @media screen and (map-get($breakpoints, desktop)) {
+      margin-left: -#{map-get($contentSideGap, medium)};
+      margin-right: -#{map-get($contentSideGap, medium)};
+    }
+
+    @media screen and (map-get($breakpoints, tablet)) {
+      margin-left: -#{map-get($contentSideGap, small)};
+      margin-right: -#{map-get($contentSideGap, small)};
+    }
+
+    @media screen and (map-get($breakpoints, s-mobile)) {
+      margin-left: -#{map-get($contentSideGap, x-small)};
+      margin-right: -#{map-get($contentSideGap, x-small)};
+    }
+
+    .avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      transform: translate(-50%, 48%);
+      background-color: #e9e9e9;
+      padding: 10px;
+
+      img {
+        background-color: $second-color;
+        border-radius: 50%;
+        filter: brightness(85%) grayscale(10%);
+        -webkit-filter: brightness(85%) grayscale(10%);
+        transition: all 1s;
+      }
+
+      &:hover img {
+        background-color: $second-color;
+        filter: brightness(100%) grayscale(0);
+        -webkit-filter: brightness(100%) grayscale(0);
+        transition: all 1s;
+        background-color: $main-color;
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .position {
+      color: $main-text-color;
+      letter-spacing: 1px;
+      font-size: 1.3rem;
+      padding: 15px 0;
+      text-transform: uppercase;
+    }
+  }
+
+  .block_2 {
+    flex: 1;
+
+    .socials {
+      margin: 0 auto;
+      margin-top: 110px;
+      display: flex;
+      justify-content: center;
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          display: block;
+          flex: 1;
+          margin-right: 20px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+
+            .soicalIcon {
+              color: #333;
+              transition: 0.2s;
+            }
+
+            &:hover .soicalIcon {
+              color: $second-color;
+            }
+          }
+        }
+      }
+    }
+
+    .text {
+      padding: 30px;
+      color: $main-color;
+      text-align: center;
+      line-height: 1.8;
+      letter-spacing: 0.2px;
+      font-size: 16px;
+    }
+
+    .btnWrapper {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+
+      > * {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (map-get($breakpoints, mobile)) {
+  .root {
+    .block_2 {
+      .text {
+        padding: 30px 0;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+@media screen and (map-get($breakpoints, s-mobile)) {
+  .root {
+    .block_1 {
+      padding: 30px 10px;
+
+      .position {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
