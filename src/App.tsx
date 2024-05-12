@@ -6,7 +6,7 @@ import { CvPage } from "./page/CvPage";
 
 function App() {
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/my-cv/">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/cv-page" element={<CvPage />} />
