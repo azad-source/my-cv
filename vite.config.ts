@@ -6,5 +6,5 @@ import viteTsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   plugins: [react(), viteTsconfigPaths()],
   build: { chunkSizeWarningLimit: 1000 },
-  base: "/",
+  base: "/my-cv/",
 });
