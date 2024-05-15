@@ -12,7 +12,6 @@ import { data } from "data";
 import JosefinSansRegular from "fonts/JosefinSans-Regular.ttf";
 import JosefinSansBold from "fonts/JosefinSans-Bold.ttf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./CvPdfView.module.scss";
 
 const {
   avatar,
