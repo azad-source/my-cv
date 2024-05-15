@@ -1,5 +1,5 @@
-@import 'src/styles/colors.scss';
-@import 'src/styles/default.scss';
+@import "src/styles/colors.scss";
+@import "src/styles/default.scss";
 
 .root {
   display: flex;
@@ -125,7 +125,12 @@
     .btnWrapper {
       display: flex;
       justify-content: center;
-      gap: 8px;
+      align-items: center;
+      gap: 24px;
+
+      .pdfDownloadLink {
+        font-size: 20px;
+      }
 
       > * {
         margin: 0;

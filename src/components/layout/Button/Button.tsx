@@ -40,12 +40,3 @@ export const Button: React.FC<Props> = ({
     </button>
   );
 };
-
-Button.defaultProps = {
-  className: undefined,
-  id: undefined,
-  disabled: false,
-  use: undefined,
-  icon: undefined,
-  onClick: undefined,
-};

@@ -14,7 +14,7 @@ export const Portfolios = () => {
             <h3 className={styles.title}>{title}</h3>
             <div className={styles.list}>
               {items.map(({ name, link, image }) => (
-                <div className={styles.list__item}>
+                <div key={name} className={styles.list__item}>
                   <a href={link} target="_blank" rel="noreferrer">
                     <div className={styles.list__item__img}>
                       <img src={image} alt={name} />

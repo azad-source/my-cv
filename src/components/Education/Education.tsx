@@ -16,6 +16,7 @@ export const Education = () => {
         {education.map(
           ({ establishment, description, degree, date }, index) => (
             <div
+              key={establishment + degree}
               className={cn(
                 styles.block,
                 styles[`block_${(index + 1) % 2 === 0 ? "right" : "left"}`]

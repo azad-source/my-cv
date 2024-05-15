@@ -63,14 +63,16 @@ export const data = {
     "I have more than 5 years of experience in web development and I really like to work with customers and provide high-quality service and quick responses. I like to discover new technologies, search out for effective decisions, and grow as a professional. Working with a variety of technologies and tools helps me to use proven best practices for existing challenges, predict application behavior and prevent bugs and incidents. Contact me if you want to work with a reliable and experienced developer. Lets get the job done!",
   education: [
     {
-      degree: "Bachelor Of Engineering (aircraft engines and power plants)",
+      degree: "Bachelor Of Engineering",
+      fieldTitle: "Aircraft engines and power plants",
       establishment: "Samara State Aerospace University",
       date: "09/2008 - 07/2011",
       location: "Samara, Russia",
       description: "",
     },
     {
-      degree: "Master Of Engineering (Aircraft Engine)",
+      degree: "Master Of Engineering",
+      fieldTitle: "Aircraft Engine",
       establishment: "Samara State Aerospace University",
       date: "09/2011 - 07/2014",
       location: "Samara, Russia",
@@ -83,16 +85,17 @@ export const data = {
       establishment: "EPAM courses",
       date: "09/2020 - 12/2020",
       location: "Samara, Russia",
-      shortDescription: (
-        <ul>
-          <li>JS Core</li>
-          <li>JavaScript Asynchronous / Event Loop</li>
-          <li>callback, HOC</li>
-          <li>closure</li>
-          <li>proto / prototype</li>
-          <li>class</li>
-        </ul>
-      ),
+      shortDescription: {
+        title: "The main topics covered in the course:",
+        list: [
+          "JS Core",
+          "JavaScript Asynchronous / Event Loop",
+          "Callback, HOC",
+          "Closure",
+          "Proto / Prototype",
+          "Classes",
+        ],
+      },
       description:
         "JS Core, Event Loop, JavaScript Asynchronous, features of es6/7/8, ReactJS",
     },
@@ -103,32 +106,17 @@ export const data = {
       company: "Safran SMARTEC - Samara",
       date: "02/2014 – 12/2018",
       location: "Samara, Russia",
-      shortDescription: (
-        <ul>
-          During my five-year tenure at Safran SMARTEC, I played a key role in
-          structural analysis of engine components. Responsibilities included:
-          <li>
-            Conducting thorough linear and nonlinear analyses to assess
-            mechanical behaviors under different conditions.
-          </li>
-          <li>
-            Developing intricate finite element models with accurate material
-            properties for real-world simulations.
-          </li>
-          <li>
-            Collaborating with material experts to specify critical material
-            properties for accurate simulations.
-          </li>
-          <li>
-            Executing complex simulations and compiling detailed reports on
-            structural integrity and performance.
-          </li>
-          <li>
-            Contributing to informed decision-making and advancements in engine
-            component design.
-          </li>
-        </ul>
-      ),
+      shortDescription: {
+        title:
+          "During my five-year tenure at Safran SMARTEC, I played a key role in structural analysis of engine components. Responsibilities included:",
+        list: [
+          "Conducting thorough linear and nonlinear analyses to assess mechanical behaviors under different conditions.",
+          "Developing intricate finite element models with accurate material properties for real-world simulations.",
+          "Collaborating with material experts to specify critical material properties for accurate simulations.",
+          "Executing complex simulations and compiling detailed reports on structural integrity and performance.",
+          "Contributing to informed decision-making and advancements in engine component design.",
+        ],
+      },
       description: `As an integral member of the Safran SMARTEC team for five years, my primary responsibilities revolved around performing structural linear and nonlinear analysis on engine components. Throughout my tenure, I have effectively contributed to the following key tasks:
                 Linear and Nonlinear Analysis: I conducted comprehensive structural linear and nonlinear analysis on intricate engine nodes, meticulously assessing their mechanical behaviors and responses under varying operational conditions. This involved utilizing advanced analysis techniques to ensure the reliability and robustness of engine components.
                 Finite Element Modeling: I was tasked with developing intricate finite element models, incorporating accurate material properties and load distributions. These models were pivotal in simulating real-world scenarios, allowing us to predict how engine nodes would perform and react under different stress factors.
@@ -144,32 +132,17 @@ export const data = {
       company: "Plusmedia - Samara",
       date: "01/2019 – 02/2021",
       location: "Samara, Russia",
-      shortDescription: (
-        <ul>
-          I focused on website development and optimization, contributing
-          significantly to the company&apos;s digital growth.
-          <li>
-            Design and develop visually appealing, user-friendly websites using
-            HTML, CSS, and JavaScript.
-          </li>
-          <li>
-            Optimize website speed and performance through techniques like image
-            compression and code minification.
-          </li>
-          <li>
-            Manage website deployment and migration across different
-            environments.
-          </li>
-          <li>
-            Configure servers with Nginx and Apache for optimal hosting
-            performance.
-          </li>
-          <li>
-            Install and configure essential software packages for website
-            operation.
-          </li>
-        </ul>
-      ),
+      shortDescription: {
+        title:
+          "I focused on website development and optimization, contributing significantly to the company's digital growth.",
+        list: [
+          "Design and develop visually appealing, user-friendly websites using HTML, CSS, and JavaScript.",
+          "Optimize website speed and performance through techniques like image compression and code minification.",
+          "Manage website deployment and migration across different environments.",
+          "Configure servers with Nginx and Apache for optimal hosting performance.",
+          "Install and configure essential software packages for website operation.",
+        ],
+      },
       description: `During my enriching two-year tenure at Plusmedia, my role primarily encompassed website development and optimization. I adeptly managed a diverse set of responsibilities, contributing significantly to the growth and success of the company's digital presence. My key responsibilities included:
                 Website Design and Development: I played an integral role in the design and development of visually appealing and user-friendly websites. Leveraging my proficiency in HTML, CSS, and JavaScript, I crafted engaging and responsive web layouts that resonated with the target audience, enhancing user experience.
                 Website Optimization: As part of the optimization process, I meticulously analyzed and fine-tuned existing websites to enhance their speed, performance, and overall user satisfaction. Implementing techniques such as image compression, code minification, and caching, I ensured seamless browsing experiences for site visitors.
@@ -187,45 +160,19 @@ export const data = {
       company: "SKB Kontur",
       date: "03/2021 – to Present",
       location: "remote",
-      shortDescription: (
-        <ul>
-          As a Frontend Developer at SKB Kontur, I&apos;d take on the following
-          responsibilities:
-          <li>
-            Build Interactive User Interfaces: Use React, Redux, and Typescript
-            to craft engaging, responsive interfaces for an outstanding user
-            experience.
-          </li>
-          <li>
-            Manage State and Data Flow: Implement Redux Toolkit Query to
-            efficiently handle state and data flow, ensuring seamless
-            communication between components.
-          </li>
-          <li>
-            Conduct Testing: Employ Playwright and Jest for comprehensive unit
-            and end-to-end testing, maintaining high code quality and stability.
-          </li>
-          <li>
-            Develop Component Library: Utilize Storybook to create and maintain
-            a visually appealing component library, streamlining collaboration
-            and development.
-          </li>
-          <li>
-            Style with SCSS: Design adaptable layouts with SCSS for
-            cross-browser compatibility and optimal performance on diverse
-            devices.
-          </li>
-          <li>
-            Foster Collaboration: Communicate regularly with cross-functional
-            teams, contributing insights and aiding decision-making for project
-            success.
-          </li>
-          <li>
-            Troubleshoot: Address technical challenges and bugs promptly to
-            maintain a smooth user experience.
-          </li>
-        </ul>
-      ),
+      shortDescription: {
+        title:
+          "As a Frontend Developer at SKB Kontur, I'd take on the following responsibilities:",
+        list: [
+          "Build Interactive User Interfaces: Use React, Redux, and Typescript to craft engaging, responsive interfaces for an outstanding user experience.",
+          "Manage State and Data Flow: Implement Redux Toolkit Query to efficiently handle state and data flow, ensuring seamless communication between components.",
+          "Conduct Testing: Employ Playwright and Jest for comprehensive unit and end-to-end testing, maintaining high code quality and stability.",
+          "Develop Component Library: Utilize Storybook to create and maintain a visually appealing component library, streamlining collaboration and development.",
+          "Style with SCSS: Design adaptable layouts with SCSS for cross-browser compatibility and optimal performance on diverse devices.",
+          "Foster Collaboration: Communicate regularly with cross-functional teams, contributing insights and aiding decision-making for project success.",
+          "Troubleshoot: Address technical challenges and bugs promptly to maintain a smooth user experience.",
+        ],
+      },
       description: `As a Frontend Developer at SKB Kontur, I would embrace the following roles and responsibilities to contribute effectively to the team:
                 Building Interactive User Interfaces: Leveraging my expertise in ReactJs, Typescript, and JavaScript, I would be responsible for creating captivating and responsive user interfaces that deliver an exceptional user experience.
                 State Management and Data Flow: Utilizing Redux, including TK, TK Query, Saga, and Thunk, I would manage state and data flow within the application, ensuring efficient communication between components and seamless application behavior.

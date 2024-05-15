@@ -10,7 +10,3 @@ interface Props {
 export const CircleIcon: React.FC<Props> = ({ className }) => (
   <FontAwesomeIcon icon={faCircle} className={cn(styles.root, className)} />
 );
-
-CircleIcon.defaultProps = {
-  className: undefined,
-};

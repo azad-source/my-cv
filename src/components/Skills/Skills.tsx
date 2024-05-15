@@ -101,7 +101,7 @@ export const Skills = () => {
             <h4>{capitalize(title)}</h4>
 
             {items.map(({ name, progress }) => (
-              <div className={styles.item}>
+              <div key={name} className={styles.item}>
                 <div className={styles.item__title}>
                   <span className={styles.item__title__percent}>
                     {progress}

@@ -14,8 +14,3 @@ export const Page: React.FC<Props> = ({ children, className, id }) => {
     </section>
   );
 };
-
-Page.defaultProps = {
-  className: undefined,
-  id: undefined,
-};

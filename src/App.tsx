@@ -2,14 +2,14 @@ import "normalize.css";
 import "./styles/app.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HomePage } from "./page/HomePage";
-import { CvPage } from "./page/CvPage";
+import { PdfViewPage } from "page/PdfViewPage";
 
 function App() {
   return (
     <BrowserRouter basename="/my-cv/">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/cv-page" element={<CvPage />} />
+        <Route path="/cv-pdf" element={<PdfViewPage />} />
       </Routes>
     </BrowserRouter>
   );

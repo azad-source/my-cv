@@ -15,6 +15,7 @@ export const Experience = () => {
       <div className={styles.root}>
         {experience.map(({ company, date, description, position }, index) => (
           <div
+            key={company}
             className={cn(
               styles.block,
               styles[`block_${(index + 1) % 2 === 0 ? "right" : "left"}`]
