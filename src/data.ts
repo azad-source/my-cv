@@ -81,10 +81,10 @@ export const data = {
   ],
   courses: [
     {
-      degree: "Frontend developer",
+      degree: "",
       establishment: "EPAM courses",
-      date: "09/2020 - 12/2020",
-      location: "Samara, Russia",
+      date: "",
+      location: "",
       shortDescription: {
         title: "The main topics covered in the course:",
         list: [
@@ -98,6 +98,22 @@ export const data = {
       },
       description:
         "JS Core, Event Loop, JavaScript Asynchronous, features of es6/7/8, ReactJS",
+    },
+    {
+      degree: "",
+      establishment: "frontendmasters.com",
+      date: "",
+      location: "",
+      shortDescription: {
+        title: "",
+        list: [
+          "JavaScript: The Hard Parts (Will Sentance)",
+          "Deep JavaScript Foundations (Kyle Simpson)",
+          "Web Performance Fundamentals (Todd Gardner)",
+          "Full Stack for Front-End Engineers (Jem Young)",
+        ],
+      },
+      description: "",
     },
   ],
   experience: [

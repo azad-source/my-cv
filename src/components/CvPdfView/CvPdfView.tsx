@@ -37,26 +37,30 @@ Font.register({ family: "Josefin-Sans-Regular", src: JosefinSansRegular });
 Font.register({ family: "Josefin-Sans-Bold", src: JosefinSansBold });
 
 const colors = {
-  mainBgColor: "rgba(252, 255, 247, 0.9)",
-  headBgColor: "rgba(248, 252, 235, 0.9)",
+  mainBgColor: "transparent",
+  headBgColor: "#15ABAB",
   headTextColor: "rgba(122, 60, 52, 0.8)",
-  mainTextColor: "rgba(0, 0, 0, 0.9)",
-  secondaryTextColor: "rgba(120, 120, 120, 0.8)",
-  thirdTextColor: "rgba(128, 128, 254, 0.8)",
+  mainTextColor: "rgba(0, 0, 0, 0.8)",
+  secondaryTextColor: "rgba(0, 0, 0, 0.6)",
+  thirdTextColor: "rgba(0, 0, 0, 0.4)",
   sectionTextColor: "rgba(101, 76, 79, 0.9)",
-  borderColor: "rgba(192, 202, 173, 0.9)",
+  sectionTitleColor: "#15ABAB",
+  borderColor: "#15ABAB",
   linkColor: "rgba(30, 70, 130, 0.9)",
 };
 
 const sizes = {
-  pagePadding: "40px",
-  leftContentWidth: "300px",
+  pagePadding: "20px",
+  leftContentWidth: "320px",
+  avatarSize: "100px",
+  contentSectionGap: "10px",
 };
 
 const font = {
   head1: 26,
-  head2: 18,
+  head2: 16,
   head3: 12,
+  head4: 10,
   mainText: 10,
   secondaryText: 10,
 };
@@ -67,13 +71,9 @@ const lineHeight = {
 };
 
 const styles = StyleSheet.create({
-  link: {
-    textDecoration: "none",
-    color: colors.linkColor,
-  },
   document: { height: "100vh" },
   page: {
-    backgroundColor: colors.mainBgColor,
+    // backgroundColor: colors.mainBgColor,
     fontFamily: "Josefin-Sans-Regular",
     color: colors.mainTextColor,
   },
@@ -81,32 +81,33 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    borderBottom: `1px solid ${colors.borderColor}`,
-    padding: `${sizes.pagePadding} ${sizes.pagePadding} 5px`,
+    // borderBottom: `1px solid ${colors.borderColor}`,
+    padding: `${sizes.pagePadding} ${sizes.pagePadding} 0`,
     backgroundColor: colors.headBgColor,
   },
   headInfo: {
     display: "flex",
     flexDirection: "column",
-    gap: 4,
+    gap: 10,
   },
   headName: {
     fontSize: font.head1,
     fontFamily: "Josefin-Sans-Bold",
     lineHeight: 1,
-    color: colors.sectionTextColor,
+    color: "#fff",
     textTransform: "uppercase",
   },
   headPosition: {
     fontSize: font.head2,
-    color: "rgb(32, 100, 217)",
+    color: "#fff",
   },
   headContacts: {
-    fontSize: font.mainText,
+    fontSize: font.head4,
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
     rowGap: 4,
+    color: "#fff",
   },
   headContactsItem: {
     display: "flex",
@@ -114,34 +115,50 @@ const styles = StyleSheet.create({
     gap: 2,
     width: "calc(45% - 25px/2)",
     alignItems: "center",
+    color: "#fff",
+  },
+  headContactsItemLink: {
+    color: "#fff",
   },
   headAvatar: {
-    minWidth: "100px",
-    height: "100px",
-    borderRadius: "50%",
+    minWidth: sizes.avatarSize,
+    height: sizes.avatarSize,
+    borderRadius: "6px",
+    border: `5px solid #fff`,
     overflow: "hidden",
-    marginTop: -15,
-    backgroundColor: "rgba(100,100,100,0.2)",
+    marginBottom: -5,
+    backgroundColor: "#fff",
+  },
+  headAvatarImage: {
+    display: "flex",
+    borderRadius: "2px",
   },
   content: {
     display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    gap: 20,
-    padding: `15px ${sizes.pagePadding} ${sizes.pagePadding}`,
+    flexDirection: "column",
+    gap: sizes.contentSectionGap,
+    padding: `10px ${sizes.pagePadding} ${sizes.pagePadding}`,
     lineHeight: lineHeight.mainText,
+  },
+  contentHorizontal: {
+    display: "flex",
+    flexDirection: "row",
+    gap: 20,
+  },
+  aboutText: {
+    fontSize: font.mainText,
   },
   contentLeft: {
     minWidth: sizes.leftContentWidth,
     width: sizes.leftContentWidth,
     display: "flex",
     flexDirection: "column",
-    gap: 10,
+    gap: sizes.contentSectionGap,
   },
   contentRight: {
     display: "flex",
     flexDirection: "column",
-    gap: 10,
+    gap: sizes.contentSectionGap,
     flexGrow: 1,
     overflow: "hidden",
   },
@@ -155,7 +172,8 @@ const styles = StyleSheet.create({
     fontFamily: "Josefin-Sans-Bold",
     textTransform: "uppercase",
     padding: "2px 0",
-    borderBottom: `3px solid ${colors.borderColor}`,
+    borderBottom: `2px solid ${colors.borderColor}`,
+    color: colors.sectionTitleColor,
   },
   contentSectionList: {
     display: "flex",
@@ -170,7 +188,7 @@ const styles = StyleSheet.create({
   listItemTitle: {
     fontSize: font.mainText,
     fontFamily: "Josefin-Sans-Bold",
-    color: colors.secondaryTextColor,
+    color: colors.mainTextColor,
   },
   listItemFieldTitle: {
     fontSize: font.mainText,
@@ -178,13 +196,13 @@ const styles = StyleSheet.create({
   listItemPlace: {
     fontSize: font.mainText,
     textTransform: "uppercase",
-    color: colors.thirdTextColor,
+    color: colors.secondaryTextColor,
   },
   listItemDateLocation: {
     display: "flex",
     flexDirection: "row",
     gap: 4,
-    color: colors.secondaryTextColor,
+    color: colors.thirdTextColor,
     fontSize: font.mainText,
   },
   date: {
@@ -215,7 +233,7 @@ const styles = StyleSheet.create({
   contentSubSection: {
     display: "flex",
     flexDirection: "column",
-    width: "45%",
+    width: "33%",
     gap: 4,
   },
   contentSubSectionTitle: {
@@ -236,8 +254,7 @@ const styles = StyleSheet.create({
   skills: {
     display: "flex",
     flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 5,
+    gap: "25px",
   },
   skillsListItem: {
     display: "flex",
@@ -263,7 +280,7 @@ export const CvPdfView = () => {
                 <View key={href} style={styles.headContactsItem}>
                   <FontAwesomeIcon icon={icon} />
                   {href ? (
-                    <Link href={href} style={styles.link}>
+                    <Link href={href} style={styles.headContactsItemLink}>
                       {value}
                     </Link>
                   ) : (
@@ -274,130 +291,168 @@ export const CvPdfView = () => {
             </View>
           </View>
           <View style={styles.headAvatar}>
-            <Image src={avatar} />
+            <Image src={avatar} style={styles.headAvatarImage} />
           </View>
         </View>
         <View style={styles.content}>
-          <View style={styles.contentLeft}>
-            <View style={styles.contentSection}>
-              <Text style={styles.contentSectionTitle}>Expirence</Text>
-              <View style={styles.contentSectionList}>
-                {filteredExperience.map(
-                  ({ company, date, position, location, shortDescription }) => (
-                    <View key={company} style={styles.listItem}>
-                      <Text style={styles.listItemTitle}>{position}</Text>
-                      <Text style={styles.listItemPlace}>{company}</Text>
-                      <View style={styles.listItemDateLocation}>
-                        <Text style={styles.date}>{date}</Text>
-                        <Text style={styles.location}>({location})</Text>
-                      </View>
-                      <View style={styles.listItemDescription}>
-                        <Text style={styles.descriptionTitle}>
-                          {shortDescription.title}
-                        </Text>
-                        <View style={styles.descriptionList}>
-                          {shortDescription.list.map((i) => (
-                            <Text key={i} style={styles.descriptionListItem}>
-                              - {i}
-                            </Text>
-                          ))}
-                        </View>
-                      </View>
-                    </View>
-                  )
-                )}
-              </View>
-            </View>
+          <View style={styles.contentSection}>
+            <Text style={styles.contentSectionTitle}>About</Text>
+            <Text style={styles.aboutText}>
+              Hi! I'am a frontend developer with over 5 years of experience. I
+              am looking for a suitable frontend developer position with an
+              exciting, innovative and ambitious company. I am exploring
+              opportunities for either remote work or office-based employment in
+              Dubai.
+            </Text>
           </View>
-          <View style={styles.contentRight}>
-            <View style={styles.contentSection}>
-              <Text style={styles.contentSectionTitle}>Education</Text>
-              <View style={styles.contentSectionList}>
-                {education.map(
-                  ({ date, degree, fieldTitle, establishment, location }) => (
-                    <View key={establishment + degree} style={styles.listItem}>
-                      <Text style={styles.listItemTitle}>{degree}</Text>
-                      <Text style={styles.listItemFieldTitle}>
-                        {fieldTitle}
-                      </Text>
-                      <Text style={styles.listItemPlace}>{establishment}</Text>
-                      <View style={styles.listItemDateLocation}>
-                        <Text style={styles.date}>{date}</Text>
-                        <Text style={styles.location}>({location})</Text>
-                      </View>
-                    </View>
-                  )
-                )}
-              </View>
-            </View>
-            <View style={styles.contentSection}>
-              <Text style={styles.contentSectionTitle}>Training / Courses</Text>
-              <View style={styles.contentSectionList}>
-                {courses.map(
-                  ({
-                    date,
-                    degree,
-                    shortDescription,
-                    establishment,
-                    location,
-                  }) => (
-                    <View key={establishment} style={styles.listItem}>
-                      <Text style={styles.listItemTitle}>{degree}</Text>
-                      <Text style={styles.listItemPlace}>{establishment}</Text>
-                      <View style={styles.listItemDateLocation}>
-                        <Text style={styles.date}>{date}</Text>
-                        <Text style={styles.location}>({location})</Text>
-                      </View>
-                      <View style={styles.listItemDescription}>
-                        <Text style={styles.descriptionTitle}>
-                          {shortDescription.title}
-                        </Text>
-                        <View style={styles.descriptionList}>
-                          {shortDescription.list.map((i) => (
-                            <Text key={i} style={styles.descriptionListItem}>
-                              - {i}
-                            </Text>
-                          ))}
+          <View style={styles.contentHorizontal}>
+            <View style={styles.contentLeft}>
+              <View style={styles.contentSection}>
+                <Text style={styles.contentSectionTitle}>Expirence</Text>
+                <View style={styles.contentSectionList}>
+                  {filteredExperience.map(
+                    ({
+                      company,
+                      date,
+                      position,
+                      location,
+                      shortDescription,
+                    }) => (
+                      <View key={company} style={styles.listItem}>
+                        <Text style={styles.listItemTitle}>{position}</Text>
+                        <Text style={styles.listItemPlace}>{company}</Text>
+                        <View style={styles.listItemDateLocation}>
+                          <Text style={styles.date}>{date}</Text>
+                          <Text style={styles.location}>({location})</Text>
+                        </View>
+                        <View style={styles.listItemDescription}>
+                          <Text style={styles.descriptionTitle}>
+                            {shortDescription.title}
+                          </Text>
+                          <View style={styles.descriptionList}>
+                            {shortDescription.list.map((i) => (
+                              <Text key={i} style={styles.descriptionListItem}>
+                                - {i}
+                              </Text>
+                            ))}
+                          </View>
                         </View>
                       </View>
-                    </View>
-                  )
-                )}
+                    )
+                  )}
+                </View>
               </View>
             </View>
-            <View style={styles.contentSection}>
-              <Text style={styles.contentSectionTitle}>Skills</Text>
-              <View style={[styles.contentSectionList, styles.skills]}>
-                {skills.map((section) => (
-                  <View key={section.title} style={styles.contentSubSection}>
-                    <Text style={styles.contentSubSectionTitle}>
-                      {section.title}
-                    </Text>
-                    <View style={styles.contentSubSectionList}>
-                      {section.items.map((i) => (
-                        <Text
-                          key={i.name}
-                          style={[styles.listItem, styles.skillsListItem]}
-                        >
-                          {i.name}
+            <View style={styles.contentRight}>
+              <View style={styles.contentSection}>
+                <Text style={styles.contentSectionTitle}>Education</Text>
+                <View style={styles.contentSectionList}>
+                  {education.map(
+                    ({ date, degree, fieldTitle, establishment, location }) => (
+                      <View
+                        key={establishment + degree}
+                        style={styles.listItem}
+                      >
+                        <Text style={styles.listItemTitle}>{degree}</Text>
+                        <Text style={styles.listItemFieldTitle}>
+                          {fieldTitle}
                         </Text>
-                      ))}
-                    </View>
-                  </View>
-                ))}
+                        <Text style={styles.listItemPlace}>
+                          {establishment}
+                        </Text>
+                        <View style={styles.listItemDateLocation}>
+                          <Text style={styles.date}>{date}</Text>
+                          <Text style={styles.location}>({location})</Text>
+                        </View>
+                      </View>
+                    )
+                  )}
+                </View>
               </View>
-            </View>
-            <View style={styles.contentSection}>
-              <Text style={styles.contentSectionTitle}>Languages</Text>
-              <View style={[styles.contentSectionList, styles.languagesList]}>
-                {langs.map((l) => (
-                  <Text
-                    key={l.language}
-                    style={styles.contentSubSectionListItem}
-                  >
-                    {l.language} - {l.level}
-                  </Text>
-                ))}
+              <View style={styles.contentSection}>
+                <Text style={styles.contentSectionTitle}>
+                  Training / Courses
+                </Text>
+                <View style={styles.contentSectionList}>
+                  {courses.map(
+                    ({
+                      date,
+                      degree,
+                      shortDescription,
+                      establishment,
+                      location,
+                    }) => (
+                      <View key={establishment} style={styles.listItem}>
+                        {!!degree && (
+                          <Text style={styles.listItemTitle}>{degree}</Text>
+                        )}
+                        {establishment && (
+                          <Text style={styles.listItemPlace}>
+                            {establishment}
+                          </Text>
+                        )}
+                        {!!date && (
+                          <View style={styles.listItemDateLocation}>
+                            <Text style={styles.date}>{date}</Text>
+                            <Text style={styles.location}>({location})</Text>
+                          </View>
+                        )}
+                        <View style={styles.listItemDescription}>
+                          <Text style={styles.descriptionTitle}>
+                            {shortDescription.title}
+                          </Text>
+                          {shortDescription.list.length > 0 && (
+                            <View style={styles.descriptionList}>
+                              {shortDescription.list.map((i) => (
+                                <Text
+                                  key={i}
+                                  style={styles.descriptionListItem}
+                                >
+                                  - {i}
+                                </Text>
+                              ))}
+                            </View>
+                          )}
+                        </View>
+                      </View>
+                    )
+                  )}
+                </View>
+              </View>
+              <View style={styles.contentSection}>
+                <Text style={styles.contentSectionTitle}>Skills</Text>
+                <View style={[styles.contentSectionList, styles.skills]}>
+                  {skills.map((section) => (
+                    <View key={section.title} style={styles.contentSubSection}>
+                      <Text style={styles.contentSubSectionTitle}>
+                        {section.title}
+                      </Text>
+                      <View style={styles.contentSubSectionList}>
+                        {section.items.map((i) => (
+                          <Text
+                            key={i.name}
+                            style={[styles.listItem, styles.skillsListItem]}
+                          >
+                            {i.name}
+                          </Text>
+                        ))}
+                      </View>
+                    </View>
+                  ))}
+                </View>
+              </View>
+              <View style={styles.contentSection}>
+                <Text style={styles.contentSectionTitle}>Languages</Text>
+                <View style={[styles.contentSectionList, styles.languagesList]}>
+                  {langs.map((l) => (
+                    <Text
+                      key={l.language}
+                      style={styles.contentSubSectionListItem}
+                    >
+                      {l.language} - {l.level}
+                    </Text>
+                  ))}
+                </View>
               </View>
             </View>
           </View>
