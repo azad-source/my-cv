@@ -299,8 +299,11 @@ export const data = {
     {
       title: "tools",
       items: [
+        { name: "webpack", progress: "60%", start: new Date("01.10.2022") },
+        { name: "vite", progress: "60%", start: new Date("01.10.2022") },
         { name: "playwright", progress: "60%", start: new Date("01.10.2022") },
         { name: "jest", progress: "30%", start: new Date("01.02.2021") },
+        { name: "vitest", progress: "30%", start: new Date("01.02.2021") },
         { name: "storybook", progress: "75%", start: new Date("05.01.2021") },
         { name: "creevey", progress: "70%", start: new Date("01.11.2021") },
         { name: "git", progress: "80%", start: new Date("05.01.2019") },
