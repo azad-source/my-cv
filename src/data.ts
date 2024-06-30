@@ -60,7 +60,13 @@ export const data = {
     },
   ],
   about:
-    "I have more than 5 years of experience in web development and I really like to work with customers and provide high-quality service and quick responses. I like to discover new technologies, search out for effective decisions, and grow as a professional. Working with a variety of technologies and tools helps me to use proven best practices for existing challenges, predict application behavior and prevent bugs and incidents. Contact me if you want to work with a reliable and experienced developer. Lets get the job done!",
+    `I have more than ${
+      new Date().getFullYear() - 2019
+    } years of experience in web development and I really like to work with customers and provide high-quality service and quick responses. ` +
+    "I like to discover new technologies, search out for effective decisions, and grow as a professional. " +
+    "Working with a variety of technologies and tools helps me to use proven best practices for existing challenges, predict application behavior and prevent bugs and incidents. " +
+    "Contact me if you want to work with a reliable and experienced developer. " +
+    "Lets get the job done!",
   education: [
     {
       degree: "Bachelor Of Engineering",
@@ -85,7 +91,7 @@ export const data = {
       establishment: "EPAM courses",
       date: "",
       location: "",
-      shortDescription: {
+      description: {
         title: "The main topics covered in the course:",
         list: [
           "JS Core",
@@ -96,15 +102,13 @@ export const data = {
           "Classes",
         ],
       },
-      description:
-        "JS Core, Event Loop, JavaScript Asynchronous, features of es6/7/8, ReactJS",
     },
     {
       degree: "",
       establishment: "frontendmasters.com",
       date: "",
       location: "",
-      shortDescription: {
+      description: {
         title: "",
         list: [
           "JavaScript: The Hard Parts (Will Sentance)",
@@ -113,42 +117,15 @@ export const data = {
           "Full Stack for Front-End Engineers (Jem Young)",
         ],
       },
-      description: "",
     },
   ],
   experience: [
-    {
-      position: "Mechanical Engineer",
-      company: "Safran SMARTEC - Samara",
-      date: "02/2014 – 12/2018",
-      location: "Samara, Russia",
-      shortDescription: {
-        title:
-          "During my five-year tenure at Safran SMARTEC, I played a key role in structural analysis of engine components. Responsibilities included:",
-        list: [
-          "Conducting thorough linear and nonlinear analyses to assess mechanical behaviors under different conditions.",
-          "Developing intricate finite element models with accurate material properties for real-world simulations.",
-          "Collaborating with material experts to specify critical material properties for accurate simulations.",
-          "Executing complex simulations and compiling detailed reports on structural integrity and performance.",
-          "Contributing to informed decision-making and advancements in engine component design.",
-        ],
-      },
-      description: `As an integral member of the Safran SMARTEC team for five years, my primary responsibilities revolved around performing structural linear and nonlinear analysis on engine components. Throughout my tenure, I have effectively contributed to the following key tasks:
-                Linear and Nonlinear Analysis: I conducted comprehensive structural linear and nonlinear analysis on intricate engine nodes, meticulously assessing their mechanical behaviors and responses under varying operational conditions. This involved utilizing advanced analysis techniques to ensure the reliability and robustness of engine components.
-                Finite Element Modeling: I was tasked with developing intricate finite element models, incorporating accurate material properties and load distributions. These models were pivotal in simulating real-world scenarios, allowing us to predict how engine nodes would perform and react under different stress factors.
-                Material Property Determination: Collaborating closely with material experts, I assisted in identifying and specifying material properties critical for accurate simulations. This process ensured that the simulations closely mirrored the actual behavior of the engine components, enhancing the precision of our analysis.
-                Calculation Execution: I successfully executed complex simulations by launching the finite element models on specified operating conditions. This step involved setting up and configuring the simulations to accurately represent real-world scenarios, capturing both expected and unexpected performance nuances.
-                Results Reporting: Post-simulation, I compiled comprehensive and detailed reports highlighting the outcomes of our analyses. These reports encompassed vital insights into the structural integrity, stress distribution, and overall performance of the engine nodes under various loads and conditions. Clear and concise visualization of results helped guide engineering decisions and optimizations.
-                In summary, my role at Safran SMARTEC involved a diverse range of responsibilities, from crafting intricate finite element models to conducting thorough linear and nonlinear analyses of engine nodes. The culmination of these efforts was the creation of insightful reports that facilitated informed decision-making and further advancements in engine component design and performance. My five-year journey at Safran SMARTEC has deepened my expertise in structural analysis and solidified my commitment to contributing to cutting-edge engineering solutions.`,
-      languages: null,
-      tools: "Software: ICEM, Patran, Ansys Workbench, Samcef, Abaqus",
-    },
     {
       position: "Web Developer",
       company: "Plusmedia - Samara",
       date: "01/2019 – 02/2021",
       location: "Samara, Russia",
-      shortDescription: {
+      description: {
         title:
           "I focused on website development and optimization, contributing significantly to the company's digital growth.",
         list: [
@@ -159,24 +136,23 @@ export const data = {
           "Install and configure essential software packages for website operation.",
         ],
       },
-      description: `During my enriching two-year tenure at Plusmedia, my role primarily encompassed website development and optimization. I adeptly managed a diverse set of responsibilities, contributing significantly to the growth and success of the company's digital presence. My key responsibilities included:
-                Website Design and Development: I played an integral role in the design and development of visually appealing and user-friendly websites. Leveraging my proficiency in HTML, CSS, and JavaScript, I crafted engaging and responsive web layouts that resonated with the target audience, enhancing user experience.
-                Website Optimization: As part of the optimization process, I meticulously analyzed and fine-tuned existing websites to enhance their speed, performance, and overall user satisfaction. Implementing techniques such as image compression, code minification, and caching, I ensured seamless browsing experiences for site visitors.
-                CMS Expertise: I demonstrated expertise in various content management systems (CMS) including Bitrix, MODX, Joomla, and WordPress. This proficiency allowed me to seamlessly navigate these platforms, customize functionalities, and create engaging and dynamic web content.
-                Site Deployment and Migration: I successfully managed the deployment and seamless migration of websites across different environments. This involved meticulous planning, testing, and execution to ensure that the transition was smooth and free of disruptions.
-                Server Configuration: I skillfully configured servers using technologies like Nginx and Apache, optimizing them for website hosting and performance. My responsibilities included setting up virtual hosts, SSL certificates, and other server-related configurations.
-                Package Installation: I took charge of installing and configuring essential software packages required for website operation. This included database management systems, scripting languages, and other server-side components necessary for the seamless functioning of websites.
-                Throughout my tenure, I continuously collaborated with cross-functional teams, including designers, developers, and content creators, to ensure the successful execution of projects. My commitment to delivering high-quality websites, optimizing user experiences, and mastering a range of CMS platforms has greatly contributed to Plusmedia's reputation as a leading digital solutions provider.
-                In summary, my two-year journey at Plusmedia has honed my skills in website design, optimization, CMS management, and server configuration. My ability to deploy, optimize, and maintain websites has played a pivotal role in enhancing Plusmedia's online presence and delivering exceptional digital experiences to clients and end-users alike.`,
-      languages: "Languages: HTML5, CSS3, Jquery, PHP7.x, Mysql",
-      tools: "Git, Photoshop, Figma, Sublime Text",
+      skills: [
+        "HTML5",
+        "CSS3",
+        "Jquery",
+        "php",
+        "mysql",
+        "git",
+        "photoshop",
+        "figma",
+      ],
     },
     {
       position: "Frontend developer",
       company: "SKB Kontur",
       date: "03/2021 – to Present",
       location: "remote",
-      shortDescription: {
+      description: {
         title:
           "As a Frontend Developer at SKB Kontur, I'd take on the following responsibilities:",
         list: [
@@ -189,20 +165,26 @@ export const data = {
           "Troubleshoot: Address technical challenges and bugs promptly to maintain a smooth user experience.",
         ],
       },
-      description: `As a Frontend Developer at SKB Kontur, I would embrace the following roles and responsibilities to contribute effectively to the team:
-                Building Interactive User Interfaces: Leveraging my expertise in ReactJs, Typescript, and JavaScript, I would be responsible for creating captivating and responsive user interfaces that deliver an exceptional user experience.
-                State Management and Data Flow: Utilizing Redux, including TK, TK Query, Saga, and Thunk, I would manage state and data flow within the application, ensuring efficient communication between components and seamless application behavior.
-                Testing and Quality Assurance: Employing Playwright and Jest, I would design and implement comprehensive unit tests and end-to-end tests, validating the functionality and performance of the application to maintain high code quality and stability.
-                Component Library Development: Using Storybook, I would create and maintain a well-organized and visually appealing component library, facilitating seamless collaboration and enhancing the development process.
-                CSS Styling and Adaptation: Implementing SCSS, I would design adaptable layouts that ensure cross-browser compatibility and optimal performance across various devices, maintaining a consistent and visually pleasing user interface.
-                Collaboration and Communication: Engaging in regular communication with cross-functional teams, I would actively participate in discussions, share insights, and contribute to decision-making processes to achieve project goals effectively.
-                Code Optimization and Performance: Continuously optimizing and refining the codebase to enhance application performance, I would apply best practices and explore innovative solutions to create a faster and more efficient frontend experience.
-                Problem Solving and Troubleshooting: Addressing technical challenges and bugs, I would analyze and resolve issues promptly, ensuring a smooth user experience and minimizing disruptions.
-                By embracing these responsibilities and utilizing my skills in ReactJs, Typescript, Redux, Playwright, Jest, SCSS, and more, I am dedicated to driving SKB Kontur's frontend development to new heights, delivering top-tier web applications that align with the company's goals and values.`,
-      languages:
-        "Languages/Frameworks/Libraries: HTML5, CSS3, SASS/SCSS, JavaScript, TypeScript, ReactJS, RTK, RTK Query, Redux Thunk, Redux Saga, Mobx",
-      tools:
-        "Tools: VS Code, Gitlab, Gitlab CI/CD, Webpack, Storybook, Creevey, Jest, Playwright, Figma, YouTrack",
+      skills: [
+        "HTML5",
+        "SASS/SCSS",
+        "JavaScript",
+        "TypeScript",
+        "ReactJS",
+        "webpack",
+        "vite",
+        "Redux Tool Kit",
+        "RTK Query",
+        "Redux Thunk",
+        "Redux Saga",
+        "gitlab",
+        "gitlab ci/cd",
+        "Storybook",
+        "Playwright",
+        "Jest",
+        "figma",
+        "YouTrack",
+      ],
     },
   ],
   portfolios: [

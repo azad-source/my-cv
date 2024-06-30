@@ -1,0 +1,12 @@
+@import "src/styles/colors.scss";
+@import "src/styles/default.scss";
+
+.root {
+  background-color: $main-color;
+  color: $page-bg-color;
+  padding: 6px 8px 4px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  line-height: 1;
+  font-size: 12px;
+}

@@ -1,118 +1,54 @@
-@import 'src/styles/colors.scss';
-@import 'src/styles/default.scss';
+@import "src/styles/colors.scss";
+@import "src/styles/default.scss";
 
 .root {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  position: relative;
+  flex-direction: column;
 
-  .block {
-    width: 50%;
-    padding: 8px 45px;
-    position: relative;
+  .item {
+    padding: 30px 40px;
+    box-sizing: border-box;
+    &:not(:last-child) {
+      border-bottom: 1px solid $border_color;
+    }
 
-    &_left {
-      padding-left: unset;
+    .place {
+      margin-top: 8px;
 
-      h3:after {
-        content: '';
-        position: absolute;
-        border-top: 25px solid $main-color;
-        border-right: 25px solid transparent;
-        right: -20px;
-        top: 0;
-      }
-
-      .circle {
-        right: 0;
-        transform: translateX(50%);
+      .date {
+        color: #8d8c8c;
       }
     }
 
-    &_right {
-      margin-top: 100px;
-      padding-right: unset;
+    .description {
+      line-height: 1.5;
+      margin-top: 12px;
 
-      .circle {
-        left: 0;
-        transform: translateX(-50%);
-      }
-
-      h3:after {
-        content: '';
-        position: absolute;
-        border-top: 25px solid $main-color;
-        border-left: 25px solid transparent;
-        left: -20px;
-        top: 0;
+      &__list {
+        margin-top: 8px;
+        list-style-position: inside;
+        padding-left: 24px;
       }
     }
 
-    &__text {
-      text-align: justify;
-      line-height: 1.7;
-      padding: 15px 15px;
-      padding-top: 15px;
-      box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
+    .skills {
+      margin-top: 20px;
     }
-
-    h3 {
-      background-color: $main-color;
-      color: $main-text-color;
-      padding: 7px 10px;
-      position: relative;
-      box-shadow: 2px -1px 4px 1px rgba(0, 0, 0, 0.2);
-    }
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 3px;
-    height: 100%;
-    background-color: $second-color;
-  }
-
-  .circle {
-    position: absolute;
-    top: 0;
   }
 }
 
 @media screen and (map-get($breakpoints, tablet)) {
   .root {
-    flex-direction: column;
+    .item {
+      padding: 20px 4px;
+      font-size: 14px;
 
-    .block {
-      width: 100%;
-      padding: 10px 20px;
+      .description {
+        top: 12px;
 
-      &_right {
-        margin-top: 20px;
-      }
-    }
-
-    &:after,
-    .circle,
-    .block h3:after {
-      display: none;
-    }
-  }
-}
-
-@media screen and (map-get($breakpoints, mobile)) {
-  .root {
-    .block {
-      padding: 10px;
-
-      &_right {
-        margin-top: 0;
+        &__list {
+          padding-left: 14px;
+        }
       }
     }
   }

@@ -1,39 +1,47 @@
 import cn from "clsx";
 import { Page } from "components/layout/Page/Page";
-import { CircleIcon } from "components/layout/CircleIcon/CircleIcon";
 import { data } from "data";
 import styles from "./Education.module.scss";
 
-const Circle = () => <CircleIcon className={styles.circle} />;
-
-const { education } = data;
+const { education, courses } = data;
 
 export const Education = () => {
+  const educationsList = [...education].reverse();
+  const coursesList = [...courses].reverse();
+
   return (
     <Page id="education">
       <h2>Education</h2>
       <div className={styles.root}>
-        {education.map(
-          ({ establishment, description, degree, date }, index) => (
-            <div
-              key={establishment + degree}
-              className={cn(
-                styles.block,
-                styles[`block_${(index + 1) % 2 === 0 ? "right" : "left"}`]
-              )}
-            >
-              <h3>{degree}</h3>
-              <div className={styles.block__text}>
-                <div>
-                  <strong>{establishment} </strong>
-                  <em>({date})</em>
-                  <p>{description}</p>
-                </div>
-              </div>
-              <Circle />
+        {educationsList.map(({ establishment, description, degree, date }) => (
+          <div key={establishment} className={cn(styles.item)}>
+            <h3>{degree}</h3>
+            <div className={styles.place}>
+              <strong>{establishment} </strong>
+              <span className={styles.date}>({date})</span>
             </div>
-          )
-        )}
+            <div className={styles.description}>{description}</div>
+          </div>
+        ))}
+        {coursesList.map(({ establishment, degree, date, description }) => (
+          <div key={establishment} className={cn(styles.item)}>
+            <h3>{degree}</h3>
+            <div className={styles.place}>
+              <strong>{establishment} </strong>
+              {date && <span className={styles.date}>({date})</span>}
+            </div>
+            <div className={styles.description}>
+              <div className={styles.description__title}>
+                {description.title}
+              </div>
+              <ul className={styles.description__list}>
+                {description.list.map((i, index) => (
+                  <li key={index}>{i}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
       </div>
     </Page>
   );

@@ -1,37 +1,40 @@
 import cn from "clsx";
 import { Page } from "components/layout/Page/Page";
-import { CircleIcon } from "components/layout/CircleIcon/CircleIcon";
 import { data } from "data";
 import styles from "./Experience.module.scss";
-
-const Circle = () => <CircleIcon className={styles.circle} />;
+import { TagList } from "components/shared/TagList/TagList";
 
 const { experience } = data;
 
 export const Experience = () => {
+  const reversedList = [...experience].reverse();
+
   return (
     <Page id="experience">
       <h2>Experience</h2>
       <div className={styles.root}>
-        {experience.map(({ company, date, description, position }, index) => (
-          <div
-            key={company}
-            className={cn(
-              styles.block,
-              styles[`block_${(index + 1) % 2 === 0 ? "right" : "left"}`]
-            )}
-          >
-            <h3>{position}</h3>
-            <div className={styles.block__text}>
-              <div>
+        {reversedList.map(
+          ({ company, date, description, position, skills }) => (
+            <div key={company} className={cn(styles.item)}>
+              <h3>{position}</h3>
+              <div className={styles.place}>
                 <strong>{company} </strong>
-                <em>({date})</em>
-                <p>{description}</p>
+                <span className={styles.date}>({date})</span>
               </div>
+              <div className={styles.description}>
+                <div className={styles.description__title}>
+                  {description.title}
+                </div>
+                <ul className={styles.description__list}>
+                  {description.list.map((i, index) => (
+                    <li key={index}>{i}</li>
+                  ))}
+                </ul>
+              </div>
+              <TagList className={styles.skills} list={skills} />
             </div>
-            <Circle />
-          </div>
-        ))}
+          )
+        )}
       </div>
     </Page>
   );

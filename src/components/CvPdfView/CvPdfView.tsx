@@ -311,13 +311,7 @@ export const CvPdfView = () => {
                 <Text style={styles.contentSectionTitle}>Expirence</Text>
                 <View style={styles.contentSectionList}>
                   {filteredExperience.map(
-                    ({
-                      company,
-                      date,
-                      position,
-                      location,
-                      shortDescription,
-                    }) => (
+                    ({ company, date, position, location, description }) => (
                       <View key={company} style={styles.listItem}>
                         <Text style={styles.listItemTitle}>{position}</Text>
                         <Text style={styles.listItemPlace}>{company}</Text>
@@ -327,10 +321,10 @@ export const CvPdfView = () => {
                         </View>
                         <View style={styles.listItemDescription}>
                           <Text style={styles.descriptionTitle}>
-                            {shortDescription.title}
+                            {description.title}
                           </Text>
                           <View style={styles.descriptionList}>
-                            {shortDescription.list.map((i) => (
+                            {description.list.map((i) => (
                               <Text key={i} style={styles.descriptionListItem}>
                                 - {i}
                               </Text>
@@ -378,7 +372,7 @@ export const CvPdfView = () => {
                     ({
                       date,
                       degree,
-                      shortDescription,
+                      description,
                       establishment,
                       location,
                     }) => (
@@ -399,11 +393,11 @@ export const CvPdfView = () => {
                         )}
                         <View style={styles.listItemDescription}>
                           <Text style={styles.descriptionTitle}>
-                            {shortDescription.title}
+                            {description.title}
                           </Text>
-                          {shortDescription.list.length > 0 && (
+                          {description.list.length > 0 && (
                             <View style={styles.descriptionList}>
-                              {shortDescription.list.map((i) => (
+                              {description.list.map((i) => (
                                 <Text
                                   key={i}
                                   style={styles.descriptionListItem}
