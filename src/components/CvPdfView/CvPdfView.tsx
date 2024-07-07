@@ -234,6 +234,7 @@ const styles = StyleSheet.create({
   contentSubSection: {
     display: "flex",
     flexDirection: "row",
+    lineHeight: 1,
   },
   contentSubSectionTitle: {
     fontSize: font.mainText,
