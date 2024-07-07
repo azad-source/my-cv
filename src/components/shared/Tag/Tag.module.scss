@@ -9,4 +9,8 @@
   box-sizing: border-box;
   line-height: 1;
   font-size: 12px;
+
+  @media screen and (map-get($breakpoints, mobile)) {
+    font-size: 10px;
+  }
 }

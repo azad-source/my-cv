@@ -14,7 +14,7 @@ export const Portfolios = () => {
       <div className={styles.root}>
         {portfolios.map((i) => (
           <div key={i.name} className={styles.item}>
-            <div className={styles.item__title}>{i.name}</div>
+            <div className={styles.item__title} />
             <div className={styles.item__content}>
               <div className={styles.image}>
                 <Zoom>
@@ -22,6 +22,10 @@ export const Portfolios = () => {
                 </Zoom>
               </div>
               <div className={styles.infoList}>
+                <div className={styles.infoItem}>
+                  <div className={styles.infoItem__caption}>Project:</div>
+                  <div className={styles.infoItem__value}>{i.name}</div>
+                </div>
                 <div className={styles.infoItem}>
                   <div className={styles.infoItem__caption}>Demo:</div>
                   <a
