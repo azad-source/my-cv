@@ -15,10 +15,10 @@ export const HomePage = () => {
       <Header />
       <div className="main-wrapper">
         <About />
+        <Skills />
         <Experience />
         <Education />
         <Portfolios />
-        <Skills />
         <Languages />
         <Contacts />
       </div>

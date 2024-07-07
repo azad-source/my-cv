@@ -53,7 +53,7 @@ const colors = {
 const sizes = {
   pagePadding: "20px",
   leftContentWidth: "320px",
-  avatarSize: "100px",
+  avatarSize: "90px",
   contentSectionGap: "10px",
 };
 
@@ -74,7 +74,6 @@ const lineHeight = {
 const styles = StyleSheet.create({
   document: { height: "100vh" },
   page: {
-    // backgroundColor: colors.mainBgColor,
     fontFamily: "Josefin-Sans-Regular",
     color: colors.mainTextColor,
   },
@@ -82,7 +81,6 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    // borderBottom: `1px solid ${colors.borderColor}`,
     padding: `${sizes.pagePadding} ${sizes.pagePadding} 0`,
     backgroundColor: colors.headBgColor,
   },
@@ -92,14 +90,14 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   headName: {
-    fontSize: font.head1,
+    fontSize: font.head2,
     fontFamily: "Josefin-Sans-Bold",
     lineHeight: 1,
     color: "#fff",
     textTransform: "uppercase",
   },
   headPosition: {
-    fontSize: font.head2,
+    fontSize: font.head3,
     color: "#fff",
   },
   headContacts: {
@@ -169,7 +167,7 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   contentSectionTitle: {
-    fontSize: font.head3,
+    fontSize: font.head4,
     fontFamily: "Josefin-Sans-Bold",
     textTransform: "uppercase",
     padding: "2px 0",
@@ -258,12 +256,13 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     gap: "10px",
+    marginBottom: "8px",
   },
   skillsListItem: {
     display: "flex",
     border: "none",
     width: "auto",
-    lineHeight: 0.7,
+    lineHeight: 0.5,
   },
   languagesList: {
     gap: 0,
@@ -280,7 +279,7 @@ export const CvPdfView = () => {
             <Text style={styles.headPosition}>{positionTitle}</Text>
             <View style={styles.headContacts}>
               {socials.map(({ href, value, icon }) => (
-                <View key={href} style={styles.headContactsItem}>
+                <View key={`${href}-${value}`} style={styles.headContactsItem}>
                   <FontAwesomeIcon icon={icon} />
                   {href ? (
                     <Link href={href} style={styles.headContactsItemLink}>

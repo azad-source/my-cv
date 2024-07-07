@@ -14,7 +14,7 @@ export const Education = () => {
       <h2>Education</h2>
       <div className={styles.root}>
         {educationsList.map(({ establishment, description, degree, date }) => (
-          <div key={establishment} className={cn(styles.item)}>
+          <div key={`${establishment}-${degree}`} className={cn(styles.item)}>
             <h3>{degree}</h3>
             <div className={styles.place}>
               <strong>{establishment} </strong>

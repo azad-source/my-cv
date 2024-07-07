@@ -67,6 +67,7 @@ interface ILang {
 
 export interface IData {
   avatar: string;
+  avatarV2: string;
   name: string;
   positionTitle: string;
   contacts: IContact[];

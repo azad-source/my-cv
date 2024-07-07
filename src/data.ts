@@ -5,6 +5,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faCity, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import avatar from "./images/avatar.png";
+import avatarV2 from "./images/avatar_transparent.png";
 import portfolio_webdev from "./images/portfolios/webdev.png";
 import portfolio_calculator from "./images/portfolios/calculator.png";
 import portfolio_momentum from "./images/portfolios/momentum.png";
@@ -32,6 +33,7 @@ const yearsOfExperience = new Date().getFullYear() - 2019;
 
 export const data: IData = {
   avatar,
+  avatarV2,
   name: "Azad MAMEDOV",
   positionTitle: "Frontend Developer",
   contacts: [
@@ -355,33 +357,33 @@ export const data: IData = {
       ],
     },
     {
+      title: "Testing and Documentation",
+      items: [
+        { name: "Playwright", progress: "60%", start: new Date("01.10.2022") },
+        { name: "Jest", progress: "30%", start: new Date("01.02.2021") },
+        { name: "Vitest", progress: "30%", start: new Date("01.02.2021") },
+        { name: "Storybook", progress: "75%", start: new Date("05.01.2021") },
+        { name: "Creevey", progress: "70%", start: new Date("01.11.2021") },
+      ],
+    },
+    {
       title: "Build and Styling Tools",
       items: [
-        { name: "webpack", progress: "60%", start: new Date("01.10.2022") },
-        { name: "vite", progress: "60%", start: new Date("01.10.2022") },
+        { name: "Webpack", progress: "60%", start: new Date("01.10.2022") },
+        { name: "Vite", progress: "60%", start: new Date("01.10.2022") },
         {
-          name: "styled-components",
+          name: "Styled-components",
           progress: "45%",
           start: new Date("02.01.2021"),
         },
       ],
     },
     {
-      title: "Testing and Documentation",
-      items: [
-        { name: "playwright", progress: "60%", start: new Date("01.10.2022") },
-        { name: "jest", progress: "30%", start: new Date("01.02.2021") },
-        { name: "vitest", progress: "30%", start: new Date("01.02.2021") },
-        { name: "storybook", progress: "75%", start: new Date("05.01.2021") },
-        { name: "creevey", progress: "70%", start: new Date("01.11.2021") },
-      ],
-    },
-    {
       title: "Version Control and CI/CD",
       items: [
-        { name: "git", progress: "80%", start: new Date("05.01.2019") },
+        { name: "Git", progress: "80%", start: new Date("05.01.2019") },
         {
-          name: "ci/cd gitlab",
+          name: "CI/CD gitlab",
           progress: "40%",
           start: new Date("01.01.2022"),
         },
