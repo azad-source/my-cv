@@ -16,6 +16,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const {
   avatar,
   name,
+  shortAbout,
   positionTitle,
   contacts,
   experience,
@@ -234,16 +235,16 @@ const styles = StyleSheet.create({
   contentSubSection: {
     display: "flex",
     flexDirection: "row",
-    lineHeight: 1,
+    lineHeight: 0.5,
+    gap: "10px",
   },
   contentSubSectionTitle: {
     fontSize: font.mainText,
     color: colors.secondaryTextColor,
-    width: "80px",
   },
   contentSubSectionList: {
-    width: "100%",
     display: "flex",
+    flex: 1,
     flexDirection: "row",
     flexWrap: "wrap",
     gap: "8px",
@@ -298,14 +299,7 @@ export const CvPdfView = () => {
         </View>
         <View style={styles.content}>
           <View style={styles.contentSection}>
-            <Text style={styles.contentSectionTitle}>About</Text>
-            <Text style={styles.aboutText}>
-              Hi! I'am a frontend developer with over 5 years of experience. I
-              am looking for a suitable frontend developer position with an
-              exciting, innovative and ambitious company. I am exploring
-              opportunities for either remote work or office-based employment in
-              Dubai.
-            </Text>
+            <Text style={styles.aboutText}>{shortAbout}</Text>
           </View>
           <View style={styles.contentSection}>
             <Text style={styles.contentSectionTitle}>Skills</Text>
@@ -316,12 +310,13 @@ export const CvPdfView = () => {
                     {section.title} :
                   </Text>
                   <View style={styles.contentSubSectionList}>
-                    {section.items.map((i) => (
+                    {section.items.map((i, index) => (
                       <Text
                         key={i.name}
                         style={[styles.listItem, styles.skillsListItem]}
                       >
-                        {i.name},
+                        {i.name}
+                        {index < section.items.length - 1 && ","}
                       </Text>
                     ))}
                   </View>

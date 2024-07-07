@@ -70,6 +70,7 @@ export interface IData {
   name: string;
   positionTitle: string;
   contacts: IContact[];
+  shortAbout: string;
   about: string;
   education: IEducation[];
   courses: ICourse[];

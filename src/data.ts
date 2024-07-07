@@ -28,6 +28,8 @@ export const contactsInfo = {
   telegram: "azad_63_mamedov",
 };
 
+const yearsOfExperience = new Date().getFullYear() - 2019;
+
 export const data: IData = {
   avatar,
   name: "Azad MAMEDOV",
@@ -69,10 +71,13 @@ export const data: IData = {
       icon: faLinkedin,
     },
   ],
+  shortAbout:
+    `Hi! I'am a frontend developer with over ${yearsOfExperience} years of experience. ` +
+    "Seeking an opportunity to work in a challenging environment to " +
+    "prove my skills and utilize my knowledge & intelligence in the " +
+    "growth of the organization.",
   about:
-    `I have more than ${
-      new Date().getFullYear() - 2019
-    } years of experience in web development and I really like to work with customers and provide high\u2011quality service and quick responses. ` +
+    `I have more than ${yearsOfExperience} years of experience in web development and I really like to work with customers and provide high\u2011quality service and quick responses. ` +
     "I like to discover new technologies, search out for effective decisions, and grow as a professional. " +
     "Working with a variety of technologies and tools helps me to use proven best practices for existing challenges, predict application behavior and prevent bugs and incidents. " +
     "Contact me if you want to work with a reliable and experienced developer. " +
@@ -321,7 +326,7 @@ export const data: IData = {
   ],
   skills: [
     {
-      title: "Languages",
+      title: "Programming Languages and Web Technologies",
       items: [
         { name: "JavaScript", progress: "75%", start: new Date("01.01.2019") },
         { name: "TypeScript", progress: "60%", start: new Date("01.01.2019") },
@@ -331,41 +336,52 @@ export const data: IData = {
       ],
     },
     {
-      title: "Frmwks / lib",
+      title: "Frameworks and Libraries",
       items: [
         { name: "ReactJS", progress: "80%", start: new Date("02.01.2020") },
         { name: "Next.js", progress: "40%", start: new Date("03.01.2022") },
         { name: "Vue.js", progress: "20%", start: new Date("04.01.2022") },
+      ],
+    },
+    {
+      title: "State Management",
+      items: [
         { name: "RTK", progress: "80%", start: new Date("02.01.2020") },
         { name: "RTK Query", progress: "80%", start: new Date("02.01.2020") },
         { name: "Redux Thunk", progress: "75%", start: new Date("02.01.2020") },
         { name: "Redux Saga", progress: "55%", start: new Date("02.01.2021") },
         { name: "Mobx", progress: "25%", start: new Date("02.01.2021") },
+        { name: "Zustand", progress: "25%", start: new Date("02.01.2021") },
+      ],
+    },
+    {
+      title: "Build and Styling Tools",
+      items: [
+        { name: "webpack", progress: "60%", start: new Date("01.10.2022") },
+        { name: "vite", progress: "60%", start: new Date("01.10.2022") },
         {
           name: "styled-components",
-          progress: "25%",
+          progress: "45%",
           start: new Date("02.01.2021"),
         },
       ],
     },
     {
-      title: "Tools",
+      title: "Testing and Documentation",
       items: [
-        { name: "webpack", progress: "60%", start: new Date("01.10.2022") },
-        { name: "vite", progress: "60%", start: new Date("01.10.2022") },
         { name: "playwright", progress: "60%", start: new Date("01.10.2022") },
         { name: "jest", progress: "30%", start: new Date("01.02.2021") },
         { name: "vitest", progress: "30%", start: new Date("01.02.2021") },
         { name: "storybook", progress: "75%", start: new Date("05.01.2021") },
         { name: "creevey", progress: "70%", start: new Date("01.11.2021") },
+      ],
+    },
+    {
+      title: "Version Control and CI/CD",
+      items: [
         { name: "git", progress: "80%", start: new Date("05.01.2019") },
         {
           name: "ci/cd gitlab",
-          progress: "40%",
-          start: new Date("01.01.2022"),
-        },
-        {
-          name: "redash",
           progress: "40%",
           start: new Date("01.01.2022"),
         },
