@@ -132,7 +132,7 @@ export const data: IData = {
   experience: [
     {
       position: "Web Developer",
-      company: "Plusmedia - Samara",
+      company: "Plusmedia",
       date: "01/2019 – 02/2021",
       location: "Samara, Russia",
       description: {
@@ -321,7 +321,7 @@ export const data: IData = {
   ],
   skills: [
     {
-      title: "languages",
+      title: "Languages",
       items: [
         { name: "JavaScript", progress: "75%", start: new Date("01.01.2019") },
         { name: "TypeScript", progress: "60%", start: new Date("01.01.2019") },
@@ -341,10 +341,15 @@ export const data: IData = {
         { name: "Redux Thunk", progress: "75%", start: new Date("02.01.2020") },
         { name: "Redux Saga", progress: "55%", start: new Date("02.01.2021") },
         { name: "Mobx", progress: "25%", start: new Date("02.01.2021") },
+        {
+          name: "styled-components",
+          progress: "25%",
+          start: new Date("02.01.2021"),
+        },
       ],
     },
     {
-      title: "tools",
+      title: "Tools",
       items: [
         { name: "webpack", progress: "60%", start: new Date("01.10.2022") },
         { name: "vite", progress: "60%", start: new Date("01.10.2022") },
@@ -356,6 +361,11 @@ export const data: IData = {
         { name: "git", progress: "80%", start: new Date("05.01.2019") },
         {
           name: "ci/cd gitlab",
+          progress: "40%",
+          start: new Date("01.01.2022"),
+        },
+        {
+          name: "redash",
           progress: "40%",
           start: new Date("01.01.2022"),
         },

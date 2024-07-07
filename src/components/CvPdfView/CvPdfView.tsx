@@ -189,6 +189,7 @@ const styles = StyleSheet.create({
     fontSize: font.mainText,
     fontFamily: "Josefin-Sans-Bold",
     color: colors.mainTextColor,
+    marginBottom: 4,
   },
   listItemFieldTitle: {
     fontSize: font.mainText,
@@ -232,19 +233,19 @@ const styles = StyleSheet.create({
   descriptionListItem: { paddingLeft: 5 },
   contentSubSection: {
     display: "flex",
-    flexDirection: "column",
-    width: "33%",
-    gap: 4,
+    flexDirection: "row",
   },
   contentSubSectionTitle: {
     fontSize: font.mainText,
-    textTransform: "uppercase",
     color: colors.secondaryTextColor,
+    width: "80px",
   },
   contentSubSectionList: {
+    width: "100%",
     display: "flex",
-    flexDirection: "column",
+    flexDirection: "row",
     flexWrap: "wrap",
+    gap: "8px",
     fontSize: font.secondaryText,
   },
   contentSubSectionListItem: {
@@ -253,14 +254,14 @@ const styles = StyleSheet.create({
   },
   skills: {
     display: "flex",
-    flexDirection: "row",
-    gap: "25px",
+    flexDirection: "column",
+    gap: "10px",
   },
   skillsListItem: {
     display: "flex",
     border: "none",
     width: "auto",
-    lineHeight: lineHeight.secondaryText,
+    lineHeight: 0.7,
   },
   languagesList: {
     gap: 0,
@@ -305,6 +306,28 @@ export const CvPdfView = () => {
               Dubai.
             </Text>
           </View>
+          <View style={styles.contentSection}>
+            <Text style={styles.contentSectionTitle}>Skills</Text>
+            <View style={[styles.contentSectionList, styles.skills]}>
+              {skills.map((section) => (
+                <View key={section.title} style={styles.contentSubSection}>
+                  <Text style={styles.contentSubSectionTitle}>
+                    {section.title} :
+                  </Text>
+                  <View style={styles.contentSubSectionList}>
+                    {section.items.map((i) => (
+                      <Text
+                        key={i.name}
+                        style={[styles.listItem, styles.skillsListItem]}
+                      >
+                        {i.name},
+                      </Text>
+                    ))}
+                  </View>
+                </View>
+              ))}
+            </View>
+          </View>
           <View style={styles.contentHorizontal}>
             <View style={styles.contentLeft}>
               <View style={styles.contentSection}>
@@ -313,12 +336,12 @@ export const CvPdfView = () => {
                   {filteredExperience.map(
                     ({ company, date, position, location, description }) => (
                       <View key={company} style={styles.listItem}>
-                        <Text style={styles.listItemTitle}>{position}</Text>
-                        <Text style={styles.listItemPlace}>{company}</Text>
-                        <View style={styles.listItemDateLocation}>
-                          <Text style={styles.date}>{date}</Text>
-                          <Text style={styles.location}>({location})</Text>
-                        </View>
+                        <Text style={styles.listItemTitle}>
+                          {position} - {company} |{" "}
+                          <Text style={styles.listItemDateLocation}>
+                            {date} ({location})
+                          </Text>
+                        </Text>
                         <View style={styles.listItemDescription}>
                           <Text style={styles.descriptionTitle}>
                             {description.title}
@@ -411,28 +434,6 @@ export const CvPdfView = () => {
                       </View>
                     )
                   )}
-                </View>
-              </View>
-              <View style={styles.contentSection}>
-                <Text style={styles.contentSectionTitle}>Skills</Text>
-                <View style={[styles.contentSectionList, styles.skills]}>
-                  {skills.map((section) => (
-                    <View key={section.title} style={styles.contentSubSection}>
-                      <Text style={styles.contentSubSectionTitle}>
-                        {section.title}
-                      </Text>
-                      <View style={styles.contentSubSectionList}>
-                        {section.items.map((i) => (
-                          <Text
-                            key={i.name}
-                            style={[styles.listItem, styles.skillsListItem]}
-                          >
-                            {i.name}
-                          </Text>
-                        ))}
-                      </View>
-                    </View>
-                  ))}
                 </View>
               </View>
               <View style={styles.contentSection}>
