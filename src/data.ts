@@ -1,4 +1,8 @@
-import { faTelegram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  faTelegram,
+  faLinkedin,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 import { faCity, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import avatar from "./images/avatar.png";
 import portfolio_webdev from "./images/portfolios/webdev.png";
@@ -17,7 +21,7 @@ export const contactsInfo = {
   region: "Dubai",
   country: "United Arab Emirates",
   email: "azad.63.mamedov@gmail.com",
-  phone: "+971 582315416",
+  phone: "+971582315416",
   linkedin: "azad-mamedov",
   facebook: "azad.mamedov.338",
   telegram: "azad_63_mamedov",
@@ -51,6 +55,12 @@ export const data = {
       href: `https://t.me/${contactsInfo.telegram}`,
       value: `@${contactsInfo.telegram}`,
       icon: faTelegram,
+    },
+    {
+      title: "whatsapp",
+      href: `https://wa.me/${contactsInfo.phone.replace("+", "")}`,
+      value: contactsInfo.phone,
+      icon: faWhatsapp,
     },
     {
       title: "linkedin",

@@ -15,7 +15,12 @@ export const Contacts = () => {
             <li key={title} className={styles.item}>
               <span className={styles.item__name}>{capitalize(title)}: </span>
               {href ? (
-                <a className={styles.item__value} href={href}>
+                <a
+                  className={styles.item__value}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {value}
                 </a>
               ) : (

@@ -10,7 +10,7 @@ import { CvPdfView } from "components/CvPdfView/CvPdfView";
 const { avatar, name, positionTitle: position, contacts, about } = data;
 
 const socials = contacts.filter(({ title }) =>
-  ["e-mail", "telegram", "facebook", "linkedin"].includes(title)
+  ["e-mail", "telegram", "whatsapp", "facebook", "linkedin"].includes(title)
 );
 
 export const About = () => {
