@@ -1637,6 +1637,7 @@ __metadata:
     normalize.css: "npm:^8.0.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
+    react-medium-image-zoom: "npm:^5.2.5"
     react-router-dom: "npm:^6.23.1"
     sass: "npm:^1.77.1"
     typescript: "npm:^5.2.2"
@@ -3206,6 +3207,16 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: 10c0/33977da7a5f1a287936a0c85639fec6ca74f4f15ef1e59a6bc20338fc73dc69555381e211f7a3529b8150a1f71e4225525b41b60b52965bda53ce7d47377ada1
+  languageName: node
+  linkType: hard
+
+"react-medium-image-zoom@npm:^5.2.5":
+  version: 5.2.5
+  resolution: "react-medium-image-zoom@npm:5.2.5"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 10c0/010ed75739ec38d09f9aa6d9d272cc6deaa812ef8d1ba583ccb59516159c48c6ae660f30e3e4e296b695d27b6ec98d8fbc52015a7b0442166c3756b855c6616d
   languageName: node
   linkType: hard
 

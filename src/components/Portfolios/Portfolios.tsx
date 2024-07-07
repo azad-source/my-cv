@@ -1,6 +1,9 @@
 import { Page } from "components/layout/Page/Page";
 import { data } from "data";
 import styles from "./Portfolios.module.scss";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
+import { TagList } from "components/shared/TagList/TagList";
 
 const { portfolios } = data;
 
@@ -9,20 +12,45 @@ export const Portfolios = () => {
     <Page id="portfolios">
       <h2>Portfolios</h2>
       <div className={styles.root}>
-        {portfolios.map(({ title, items }) => (
-          <div key={title}>
-            <h3 className={styles.title}>{title}</h3>
-            <div className={styles.list}>
-              {items.map(({ name, link, image }) => (
-                <div key={name} className={styles.list__item}>
-                  <a href={link} target="_blank" rel="noreferrer">
-                    <div className={styles.list__item__img}>
-                      <img src={image} alt={name} />
-                    </div>
-                    <div className={styles.list__item__name}>{name}</div>
+        {portfolios.map((i) => (
+          <div key={i.name} className={styles.item}>
+            <div className={styles.item__title}>{i.name}</div>
+            <div className={styles.item__content}>
+              <div className={styles.image}>
+                <Zoom>
+                  <img src={i.image} alt={i.name} />
+                </Zoom>
+              </div>
+              <div className={styles.infoList}>
+                <div className={styles.infoItem}>
+                  <div className={styles.infoItem__caption}>Demo:</div>
+                  <a
+                    href={i.demoLink}
+                    target="_blank"
+                    className={styles.infoItem__value}
+                  >
+                    {i.demoLink}
                   </a>
                 </div>
-              ))}
+                <div className={styles.infoItem}>
+                  <div className={styles.infoItem__caption}>Repo:</div>
+                  <a
+                    href={i.repoLink}
+                    target="_blank"
+                    className={styles.infoItem__value}
+                  >
+                    {i.repoLink}
+                  </a>
+                </div>
+                <div className={styles.infoItem}>
+                  <div className={styles.infoItem__value}>{i.description}</div>
+                </div>
+                <div className={styles.infoItem}>
+                  <div className={styles.infoItem__value}>
+                    <TagList list={i.stackList} />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         ))}

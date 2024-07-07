@@ -10,10 +10,11 @@ import portfolio_calculator from "./images/portfolios/calculator.png";
 import portfolio_momentum from "./images/portfolios/momentum.png";
 import portfolio_virtualKeyboard from "./images/portfolios/virtual-keyboard.png";
 import portfolio_pureWater from "./images/portfolios/pure-water.png";
+import portfolio_furniro from "./images/portfolios/furniro.png";
 import portfolio_timelineDashboard from "./images/portfolios/timeline-dashboard.png";
 import portfolio_achord from "./images/portfolios/achord.png";
 import portfolio_notes from "./images/portfolios/notes.png";
-import portfolio_recipes from "./images/portfolios/recipes.png";
+import { IData } from "models";
 
 export const contactsInfo = {
   post: "",
@@ -27,14 +28,13 @@ export const contactsInfo = {
   telegram: "azad_63_mamedov",
 };
 
-export const data = {
+export const data: IData = {
   avatar,
   name: "Azad MAMEDOV",
   positionTitle: "Frontend Developer",
   contacts: [
     {
       title: "location",
-      href: null,
       value: `${contactsInfo.city}, ${contactsInfo.region}, ${contactsInfo.country}`,
       icon: faCity,
     },
@@ -199,69 +199,124 @@ export const data = {
   ],
   portfolios: [
     {
-      title: "Java Script",
-      items: [
-        {
-          name: "Webdev",
-          link: "https://azad-source.github.io/webdev/",
-          image: portfolio_webdev,
-        },
-        {
-          name: "Calculator",
-          link: "https://azad-source.github.io/calculator/",
-          image: portfolio_calculator,
-        },
-        {
-          name: "Momentum",
-          link: "https://azad-source.github.io/momentum/",
-          image: portfolio_momentum,
-        },
-        {
-          name: "Virtual keyboard",
-          link: "https://azad-source.github.io/virtual-keyboard/",
-          image: portfolio_virtualKeyboard,
-        },
-        {
-          name: "Pure water",
-          link: "https://azad-source.github.io/pure-water/",
-          image: portfolio_pureWater,
-        },
-        {
-          name: "Timeline dashboard",
-          link: "https://azad-source.github.io/timeline-dashboard/",
-          image: portfolio_timelineDashboard,
-        },
+      name: "Achord",
+      demoLink: "https://achord.ru/",
+      image: portfolio_achord,
+      description:
+        "Achord is a comprehensive resource for piano sheet music, " +
+        "organized by genre and alphabetically. Users can easily search " +
+        "for sheet music by title or author, making it an ideal destination " +
+        "for pianists of all levels",
+      repoLink: "https://github.com/azad-source/achord.ru",
+      stackList: [
+        "ReactJs",
+        "Typescript",
+        "Webpack",
+        "RTK Query",
+        "SASS",
+        "Axios",
       ],
     },
     {
-      title: "React.js",
-      items: [
-        {
-          name: "Achord",
-          link: "https://achord.ru/",
-          image: portfolio_achord,
-        },
+      name: "Furniro",
+      demoLink: "https://azad-source.github.io/furniro/",
+      image: portfolio_furniro,
+      description:
+        "Furniro is an online store where you can order furniture, explore " +
+        "interior designs, and choose your preferred style. " +
+        "It offers a seamless shopping experience with a wide " +
+        "range of options to fit any aesthetic.",
+      repoLink: "https://github.com/azad-source/furniro",
+      stackList: [
+        "ReactJs",
+        "Typescript",
+        "Vite",
+        "Zustand",
+        "Styled-components",
       ],
     },
     {
-      title: "Vue.js",
-      items: [
-        {
-          name: "Task manager",
-          link: "https://azad-source.github.io/notes/dist/",
-          image: portfolio_notes,
-        },
-      ],
+      name: "Pure water",
+      demoLink: "https://azad-source.github.io/pure-water/",
+      image: portfolio_pureWater,
+      description:
+        "Pure Water simplifies the water ordering process by allowing " +
+        "users to specify delivery date, time, volume, address, " +
+        "and recipient details in a straightforward form. This service " +
+        "ensures a seamless and convenient water delivery experience. ",
+      repoLink: "https://github.com/azad-source/pure-water",
+      stackList: ["HTML", "CSS", "JavaScript"],
     },
     {
-      title: "MEVN (Vue Vuex Node Express MongoDB)",
-      items: [
-        {
-          name: "Recipe manager",
-          link: "https://azad-source.github.io/recipes/dist/",
-          image: portfolio_recipes,
-        },
-      ],
+      name: "Virtual keyboard",
+      demoLink: "https://azad-source.github.io/virtual-keyboard/",
+      image: portfolio_virtualKeyboard,
+      description:
+        "This virtual keyboard component allows you to perform nearly " +
+        "all the same actions as a regular physical keyboard. " +
+        "Enjoy the convenience and flexibility of typing and " +
+        "inputting commands virtually.",
+      repoLink: "https://github.com/azad-source/virtual-keyboard",
+      stackList: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+      name: "Calculator",
+      demoLink: "https://azad-source.github.io/calculator/",
+      image: portfolio_calculator,
+      description:
+        "This page features a versatile calculator capable " +
+        "of performing addition, subtraction, multiplication, " +
+        "division, exponentiation, root extraction, and percentage calculations. " +
+        "Enjoy a pleasant animated space background while you compute.",
+      repoLink: "https://github.com/azad-source/calculator",
+      stackList: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+      name: "Momentum",
+      demoLink: "https://azad-source.github.io/momentum/",
+      image: portfolio_momentum,
+      description:
+        "This page displays the current time, an input field " +
+        "for your name, and a task list for today. You can change " +
+        "the background, view inspirational quotes, and check the weather " +
+        "for your selected city.",
+      repoLink: "https://github.com/azad-source/momentum",
+      stackList: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+      name: "Timeline dashboard",
+      demoLink: "https://azad-source.github.io/timeline-dashboard/",
+      image: portfolio_timelineDashboard,
+      description:
+        "This dashboard component displays employee schedules, " +
+        "including work attendance and break times. It allows " +
+        "viewing by departments and individual employees for a specified date.",
+      repoLink: "https://github.com/azad-source/timeline-dashboard",
+      stackList: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+      name: "Webdev",
+      demoLink: "https://azad-source.github.io/webdev/",
+      image: portfolio_webdev,
+      description:
+        "Service for providing a comprehensive web " +
+        "development learning plan, designed to guide " +
+        "you from beginner to expert. Start your journey " +
+        "today and master the skills needed for a successful " +
+        "career in web development.",
+      repoLink: "https://github.com/azad-source/webdev",
+      stackList: ["HTML", "CSS"],
+    },
+    {
+      name: "Notes",
+      demoLink: "https://azad-source.github.io/notes/dist/",
+      image: portfolio_notes,
+      description:
+        "Notes is a task management application designed " +
+        "as a to-do list for planning and organizing tasks efficiently. " +
+        "Keep track of your tasks, prioritize them, and stay productive with ease.",
+      repoLink: "https://github.com/azad-source/notes",
+      stackList: ["Vue", "Typescript", "SASS"],
     },
   ],
   skills: [

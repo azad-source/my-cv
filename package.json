@@ -23,6 +23,7 @@
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-medium-image-zoom": "^5.2.5",
     "react-router-dom": "^6.23.1",
     "vite-tsconfig-paths": "^4.3.2"
   },
