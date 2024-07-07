@@ -12,7 +12,7 @@ export const Contacts = () => {
       <div className={styles.root}>
         <ul className={styles.items}>
           {contacts.map(({ title, value, href }) => (
-            <li key={title}>
+            <li key={title} className={styles.item}>
               <span className={styles.item__name}>{capitalize(title)}: </span>
               {href ? (
                 <a className={styles.item__value} href={href}>

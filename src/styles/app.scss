@@ -94,10 +94,7 @@ h1 {
   font-family: "Josefin-Sans-Bold", sans-serif;
   font-weight: normal;
   @media screen and (map-get($breakpoints, mobile)) {
-    font-size: 2rem;
-  }
-  @media screen and (map-get($breakpoints, s-mobile)) {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 }
 

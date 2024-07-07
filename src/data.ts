@@ -62,7 +62,7 @@ export const data = {
   about:
     `I have more than ${
       new Date().getFullYear() - 2019
-    } years of experience in web development and I really like to work with customers and provide high-quality service and quick responses. ` +
+    } years of experience in web development and I really like to work with customers and provide high\u2011quality service and quick responses. ` +
     "I like to discover new technologies, search out for effective decisions, and grow as a professional. " +
     "Working with a variety of technologies and tools helps me to use proven best practices for existing challenges, predict application behavior and prevent bugs and incidents. " +
     "Contact me if you want to work with a reliable and experienced developer. " +

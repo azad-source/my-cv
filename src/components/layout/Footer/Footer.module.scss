@@ -1,5 +1,5 @@
-@import 'src/styles/colors.scss';
-@import 'src/styles/default.scss';
+@import "src/styles/colors.scss";
+@import "src/styles/default.scss";
 
 .root {
   width: 100%;
@@ -13,6 +13,7 @@
     text-align: center;
     width: 100%;
     letter-spacing: 2px;
+    color: $main-text-color;
 
     @media screen and (map-get($breakpoints, s-mobile)) {
       footer .copyright {
