@@ -9,7 +9,7 @@ const { experience } = data;
 export const Experience = () => {
   return (
     <Page id="experience">
-      <h2>Experience</h2>
+      <h2>Experiences</h2>
       <div className={styles.root}>
         {experience.map(({ company, date, description, position, skills }) => (
           <div key={company} className={cn(styles.item)}>

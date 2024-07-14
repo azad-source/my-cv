@@ -43,8 +43,8 @@ const ColorScheme = {
 
 const colors = {
   mainBgColor: "transparent",
-  headBgColor: ColorScheme.mainColor,
-  headTextColor: "rgba(122, 60, 52, 0.8)",
+  headBgColor: "#fff",
+  headTextColor: "#000",
   mainTextColor: "rgba(0, 0, 0, 0.8)",
   secondaryTextColor: "rgba(0, 0, 0, 0.6)",
   thirdTextColor: "rgba(0, 0, 0, 0.4)",
@@ -58,7 +58,7 @@ const sizes = {
   pagePaddingX: "15px",
   pagePaddingY: "20px",
   leftContentWidth: "375px",
-  avatarSize: "90px",
+  avatarSize: "80px",
   contentSectionGap: "10px",
 };
 
@@ -88,6 +88,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     padding: `${sizes.pagePaddingY} ${sizes.pagePaddingX} 0`,
     backgroundColor: colors.headBgColor,
+    borderBottom: `2px solid ${colors.borderColor}`,
+    boxSizing: "border-box",
   },
   headInfo: {
     display: "flex",
@@ -98,12 +100,12 @@ const styles = StyleSheet.create({
     fontSize: font.head2,
     fontFamily: "Josefin-Sans-Bold",
     lineHeight: 1,
-    color: "#fff",
+    color: colors.headTextColor,
     textTransform: "uppercase",
   },
   headPosition: {
     fontSize: font.head3,
-    color: "#fff",
+    color: colors.headTextColor,
   },
   headContacts: {
     fontSize: font.head4,
@@ -111,7 +113,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
     rowGap: 4,
-    color: "#fff",
+    color: colors.headTextColor,
   },
   headContactsItem: {
     display: "flex",
@@ -119,23 +121,22 @@ const styles = StyleSheet.create({
     gap: 2,
     width: "calc(45% - 25px/2)",
     alignItems: "center",
-    color: "#fff",
+    color: colors.headTextColor,
   },
   headContactsItemLink: {
-    color: "#fff",
+    color: colors.headTextColor,
   },
   headAvatar: {
     minWidth: sizes.avatarSize,
     height: sizes.avatarSize,
-    borderRadius: "6px",
-    border: `5px solid #fff`,
+    borderBottom: `3px solid #fff`,
     overflow: "hidden",
-    marginBottom: -5,
     backgroundColor: "#fff",
+    boxSizing: "border-box",
   },
   headAvatarImage: {
     display: "flex",
-    borderRadius: "2px",
+    boxSizing: "border-box",
   },
   content: {
     display: "flex",
@@ -330,7 +331,7 @@ export const CvPdfView = () => {
           <View style={styles.contentHorizontal}>
             <View style={styles.contentLeft}>
               <View style={styles.contentSection}>
-                <Text style={styles.contentSectionTitle}>Expirence</Text>
+                <Text style={styles.contentSectionTitle}>Experiences</Text>
                 <View style={styles.contentSectionList}>
                   {filteredExperience.map(
                     ({ company, date, position, location, description }) => (
@@ -348,7 +349,7 @@ export const CvPdfView = () => {
                           <View style={styles.descriptionList}>
                             {description.list.map((i) => (
                               <Text key={i} style={styles.descriptionListItem}>
-                                - {i}
+                                • {i}
                               </Text>
                             ))}
                           </View>
@@ -424,7 +425,7 @@ export const CvPdfView = () => {
                                   key={i}
                                   style={styles.descriptionListItem}
                                 >
-                                  - {i}
+                                  • {i}
                                 </Text>
                               ))}
                             </View>

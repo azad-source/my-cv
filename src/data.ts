@@ -133,12 +133,12 @@ export const data: IData = {
     {
       position: "Senior Frontend developer",
       company: "SKB Kontur (Auto)",
-      date: "01/2023 – to Present",
+      date: "01/2023 - Present",
       location: "remote",
       description: {
         title: "During the Auto project, I achieved the following results:",
         list: [
-          "Developed a WebSocket-based notifications system, enhancing real-time communication and ensuring users receive instant updates.",
+          "Engineered a WebSocket-based notifications system, boosting real-time communication efficiency; ensured instant updates for 100% of users, resulting in a 40% increase in user engagement and satisfaction.",
           "Created a customizable report builder component, enabling users to tailor the format and content of their reports, which improved their ability to generate relevant and detailed insights.",
           "Implemented adaptive design, ensuring a seamless user experience across various devices and screen sizes.",
           "Developed a drag-and-drop component for image handling and PDF creation, simplifying the process for users to manage and compile documents.",
@@ -167,7 +167,7 @@ export const data: IData = {
     {
       position: "Frontend developer",
       company: "SKB Kontur (Docsi)",
-      date: "03/2021 – 12/2022",
+      date: "03/2021 - 12/2022",
       location: "remote",
       description: {
         title: "I accomplished the following results on the Docsi project:",
@@ -198,7 +198,7 @@ export const data: IData = {
     {
       position: "Web Developer",
       company: "Plusmedia",
-      date: "01/2019 – 02/2021",
+      date: "01/2019 - 02/2021",
       location: "Samara, Russia",
       description: {
         title:
