@@ -6,15 +6,8 @@ import {
 import { faCity, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import avatar from "./images/avatar.png";
 import avatarV2 from "./images/avatar_transparent.png";
-import portfolio_webdev from "./images/portfolios/webdev.png";
-import portfolio_calculator from "./images/portfolios/calculator.png";
-import portfolio_momentum from "./images/portfolios/momentum.png";
-import portfolio_virtualKeyboard from "./images/portfolios/virtual-keyboard.png";
-import portfolio_pureWater from "./images/portfolios/pure-water.png";
 import portfolio_furniro from "./images/portfolios/furniro.png";
-import portfolio_timelineDashboard from "./images/portfolios/timeline-dashboard.png";
 import portfolio_achord from "./images/portfolios/achord.png";
-import portfolio_notes from "./images/portfolios/notes.png";
 import { IData } from "models";
 
 export const contactsInfo = {
@@ -35,7 +28,7 @@ export const data: IData = {
   avatar,
   avatarV2,
   name: "Azad MAMEDOV",
-  positionTitle: "Frontend Developer",
+  positionTitle: "Senior Frontend Developer",
   contacts: [
     {
       title: "location",
@@ -112,7 +105,7 @@ export const data: IData = {
         title: "The main topics covered in the course:",
         list: [
           "JS Core",
-          "JavaScript Asynchronous / Event Loop",
+          "JS Asynchronous / Event Loop",
           "Callback, HOC",
           "Closure",
           "Proto / Prototype",
@@ -128,15 +121,80 @@ export const data: IData = {
       description: {
         title: "",
         list: [
-          "JavaScript: The Hard Parts (Will Sentance)",
-          "Deep JavaScript Foundations (Kyle Simpson)",
-          "Web Performance Fundamentals (Todd Gardner)",
-          "Full Stack for Front-End Engineers (Jem Young)",
+          "JavaScript: The Hard Parts",
+          "Deep JavaScript Foundations",
+          "Web Performance Fundamentals",
+          "Full Stack for Front-End Engineers",
         ],
       },
     },
   ],
   experience: [
+    {
+      position: "Frontend developer",
+      company: "SKB Kontur (Auto)",
+      date: "01/2023 – to Present",
+      location: "remote",
+      description: {
+        title: "During the Auto project, I achieved the following results:",
+        list: [
+          "Developed a WebSocket-based notifications system, enhancing real-time communication and ensuring users receive instant updates.",
+          "Created a customizable report builder component, enabling users to tailor the format and content of their reports, which improved their ability to generate relevant and detailed insights.",
+          "Implemented adaptive design, ensuring a seamless user experience across various devices and screen sizes.",
+          "Developed a drag-and-drop component for image handling and PDF creation, simplifying the process for users to manage and compile documents.",
+          "Wrote Playwright tests for key service scenarios, ensuring the reliability and stability of critical features.",
+          "Mentored a junior developer, providing guidance in development, conducting thorough code reviews after each task, and performing design reviews beforehand, which contributed to the overall quality and robustness of the project.",
+        ],
+      },
+      skills: [
+        "ReactJS",
+        "TypeScript",
+        "JavaScript",
+        "webpack",
+        "vite",
+        "SASS/SCSS",
+        "Redux Tool Kit",
+        "RTK Query",
+        "Redux Saga",
+        "gitlab ci/cd",
+        "Storybook",
+        "Playwright",
+        "Jest",
+        "figma",
+        "YouTrack",
+      ],
+    },
+    {
+      position: "Frontend developer",
+      company: "SKB Kontur (Docsi)",
+      date: "03/2021 – 12/2022",
+      location: "remote",
+      description: {
+        title: "I accomplished the following results on the Docsi project:",
+        list: [
+          "Developed document handling features for tax authorities, including batch processing and multi-page PDF support.",
+          "Implemented a system for searching, filtering, and sorting documents, with advanced parameter search capabilities.",
+          "Enhanced packaging and shipment processes with new methods and controllers. ",
+          "Conducted extensive refactoring and optimization, updating Storybook components and screenshots.",
+          "Implemented unit and automated tests for all critical service functionalities.",
+        ],
+      },
+      skills: [
+        "ReactJS",
+        "TypeScript",
+        "JavaScript",
+        "webpack",
+        "SASS/SCSS",
+        "Redux Tool Kit",
+        "Redux Thunk",
+        "gitlab ci/cd",
+        "Storybook",
+        "Jest",
+        "Creevey",
+        "figma",
+        "YouTrack",
+      ],
+    },
     {
       position: "Web Developer",
       company: "Plusmedia",
@@ -162,45 +220,6 @@ export const data: IData = {
         "git",
         "photoshop",
         "figma",
-      ],
-    },
-    {
-      position: "Frontend developer",
-      company: "SKB Kontur",
-      date: "03/2021 – to Present",
-      location: "remote",
-      description: {
-        title:
-          "As a Frontend Developer at SKB Kontur, I'd take on the following responsibilities:",
-        list: [
-          "Build Interactive User Interfaces: Use React, Redux, and Typescript to craft engaging, responsive interfaces for an outstanding user experience.",
-          "Manage State and Data Flow: Implement Redux Toolkit Query to efficiently handle state and data flow, ensuring seamless communication between components.",
-          "Conduct Testing: Employ Playwright and Jest for comprehensive unit and end-to-end testing, maintaining high code quality and stability.",
-          "Develop Component Library: Utilize Storybook to create and maintain a visually appealing component library, streamlining collaboration and development.",
-          "Style with SCSS: Design adaptable layouts with SCSS for cross-browser compatibility and optimal performance on diverse devices.",
-          "Foster Collaboration: Communicate regularly with cross-functional teams, contributing insights and aiding decision-making for project success.",
-          "Troubleshoot: Address technical challenges and bugs promptly to maintain a smooth user experience.",
-        ],
-      },
-      skills: [
-        "HTML5",
-        "SASS/SCSS",
-        "JavaScript",
-        "TypeScript",
-        "ReactJS",
-        "webpack",
-        "vite",
-        "Redux Tool Kit",
-        "RTK Query",
-        "Redux Thunk",
-        "Redux Saga",
-        "gitlab",
-        "gitlab ci/cd",
-        "Storybook",
-        "Playwright",
-        "Jest",
-        "figma",
-        "YouTrack",
       ],
     },
   ],
@@ -241,89 +260,6 @@ export const data: IData = {
         "Zustand",
         "Styled-components",
       ],
-    },
-    {
-      name: "Pure water",
-      demoLink: "https://azad-source.github.io/pure-water/",
-      image: portfolio_pureWater,
-      description:
-        "Pure Water simplifies the water ordering process by allowing " +
-        "users to specify delivery date, time, volume, address, " +
-        "and recipient details in a straightforward form. This service " +
-        "ensures a seamless and convenient water delivery experience. ",
-      repoLink: "https://github.com/azad-source/pure-water",
-      stackList: ["HTML", "CSS", "JavaScript"],
-    },
-    {
-      name: "Virtual keyboard",
-      demoLink: "https://azad-source.github.io/virtual-keyboard/",
-      image: portfolio_virtualKeyboard,
-      description:
-        "This virtual keyboard component allows you to perform nearly " +
-        "all the same actions as a regular physical keyboard. " +
-        "Enjoy the convenience and flexibility of typing and " +
-        "inputting commands virtually.",
-      repoLink: "https://github.com/azad-source/virtual-keyboard",
-      stackList: ["HTML", "CSS", "JavaScript"],
-    },
-    {
-      name: "Calculator",
-      demoLink: "https://azad-source.github.io/calculator/",
-      image: portfolio_calculator,
-      description:
-        "This page features a versatile calculator capable " +
-        "of performing addition, subtraction, multiplication, " +
-        "division, exponentiation, root extraction, and percentage calculations. " +
-        "Enjoy a pleasant animated space background while you compute.",
-      repoLink: "https://github.com/azad-source/calculator",
-      stackList: ["HTML", "CSS", "JavaScript"],
-    },
-    {
-      name: "Momentum",
-      demoLink: "https://azad-source.github.io/momentum/",
-      image: portfolio_momentum,
-      description:
-        "This page displays the current time, an input field " +
-        "for your name, and a task list for today. You can change " +
-        "the background, view inspirational quotes, and check the weather " +
-        "for your selected city.",
-      repoLink: "https://github.com/azad-source/momentum",
-      stackList: ["HTML", "CSS", "JavaScript"],
-    },
-    {
-      name: "Timeline dashboard",
-      demoLink: "https://azad-source.github.io/timeline-dashboard/",
-      image: portfolio_timelineDashboard,
-      description:
-        "This dashboard component displays employee schedules, " +
-        "including work attendance and break times. It allows " +
-        "viewing by departments and individual employees for a specified date.",
-      repoLink: "https://github.com/azad-source/timeline-dashboard",
-      stackList: ["HTML", "CSS", "JavaScript"],
-    },
-    {
-      name: "Webdev",
-      demoLink: "https://azad-source.github.io/webdev/",
-      image: portfolio_webdev,
-      description:
-        "Service for providing a comprehensive web " +
-        "development learning plan, designed to guide " +
-        "you from beginner to expert. Start your journey " +
-        "today and master the skills needed for a successful " +
-        "career in web development.",
-      repoLink: "https://github.com/azad-source/webdev",
-      stackList: ["HTML", "CSS"],
-    },
-    {
-      name: "Notes",
-      demoLink: "https://azad-source.github.io/notes/dist/",
-      image: portfolio_notes,
-      description:
-        "Notes is a task management application designed " +
-        "as a to-do list for planning and organizing tasks efficiently. " +
-        "Keep track of your tasks, prioritize them, and stay productive with ease.",
-      repoLink: "https://github.com/azad-source/notes",
-      stackList: ["Vue", "Typescript", "SASS"],
     },
   ],
   skills: [

@@ -51,8 +51,9 @@ const colors = {
 };
 
 const sizes = {
-  pagePadding: "20px",
-  leftContentWidth: "320px",
+  pagePaddingX: "15px",
+  pagePaddingY: "20px",
+  leftContentWidth: "375px",
   avatarSize: "90px",
   contentSectionGap: "10px",
 };
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    padding: `${sizes.pagePadding} ${sizes.pagePadding} 0`,
+    padding: `${sizes.pagePaddingY} ${sizes.pagePaddingX} 0`,
     backgroundColor: colors.headBgColor,
   },
   headInfo: {
@@ -136,13 +137,13 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     gap: sizes.contentSectionGap,
-    padding: `10px ${sizes.pagePadding} ${sizes.pagePadding}`,
+    padding: `10px ${sizes.pagePaddingX} ${sizes.pagePaddingY}`,
     lineHeight: lineHeight.mainText,
   },
   contentHorizontal: {
     display: "flex",
     flexDirection: "row",
-    gap: 20,
+    gap: "15px",
   },
   aboutText: {
     fontSize: font.mainText,
@@ -195,7 +196,6 @@ const styles = StyleSheet.create({
   },
   listItemPlace: {
     fontSize: font.mainText,
-    textTransform: "uppercase",
     color: colors.secondaryTextColor,
   },
   listItemDateLocation: {

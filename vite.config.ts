@@ -7,4 +7,7 @@ export default defineConfig({
   plugins: [react(), viteTsconfigPaths()],
   build: { chunkSizeWarningLimit: 1000 },
   base: "/my-cv/",
+  server: {
+    open: true,
+  },
 });
