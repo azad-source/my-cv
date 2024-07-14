@@ -88,7 +88,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     padding: `${sizes.pagePaddingY} ${sizes.pagePaddingX} 0`,
     backgroundColor: colors.headBgColor,
-    borderBottom: `2px solid ${colors.borderColor}`,
     boxSizing: "border-box",
   },
   headInfo: {
@@ -303,6 +302,7 @@ export const CvPdfView = () => {
         </View>
         <View style={styles.content}>
           <View style={styles.contentSection}>
+            <Text style={styles.contentSectionTitle}>About</Text>
             <Text style={styles.aboutText}>{shortAbout}</Text>
           </View>
           <View style={styles.contentSection}>

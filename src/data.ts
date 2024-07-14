@@ -138,12 +138,11 @@ export const data: IData = {
       description: {
         title: "During the Auto project, I achieved the following results:",
         list: [
-          "Engineered a WebSocket-based notifications system, boosting real-time communication efficiency; ensured instant updates for 100% of users, resulting in a 40% increase in user engagement and satisfaction.",
-          "Created a customizable report builder component, enabling users to tailor the format and content of their reports, which improved their ability to generate relevant and detailed insights.",
+          "Developed a WebSocket-based notifications system, enhancing real-time communication, ensuring users receive instant updates, resulting in a 31% increase in user engagement.",
+          "Created a customizable report builder component, enabling users to tailor the format and content of their reports, which improved report generation efficiency by 27%.",
           "Implemented adaptive design, ensuring a seamless user experience across various devices and screen sizes.",
           "Developed a drag-and-drop component for image handling and PDF creation, simplifying the process for users to manage and compile documents.",
-          "Wrote Playwright tests for key service scenarios, ensuring the reliability and stability of critical features.",
-          "Mentored a junior developer, providing guidance in development, conducting thorough code reviews after each task, and performing design reviews beforehand, which contributed to the overall quality and robustness of the project.",
+          "Wrote Playwright tests for key service scenarios, ensuring the reliability and stability of critical features, reducing bug incidence by ~ 20%.",
         ],
       },
       skills: [
@@ -172,9 +171,9 @@ export const data: IData = {
       description: {
         title: "I accomplished the following results on the Docsi project:",
         list: [
-          "Developed document handling features for tax authorities, including batch processing and multi-page PDF support.",
+          "Developed document handling features for tax authorities, including batch processing and multi-page PDF support, increasing document processing speed by ~ 40%.",
           "Implemented a system for searching, filtering, and sorting documents, with advanced parameter search capabilities.",
-          "Enhanced packaging and shipment processes with new methods and controllers. ",
+          "Enhanced packaging and shipment processes with new methods and controllers, which significantly reduced processing time.",
           "Conducted extensive refactoring and optimization, updating Storybook components and screenshots.",
           "Implemented unit and automated tests for all critical service functionalities.",
         ],
@@ -208,7 +207,6 @@ export const data: IData = {
           "Optimize website speed and performance through techniques like image compression and code minification.",
           "Manage website deployment and migration across different environments.",
           "Configure servers with Nginx and Apache for optimal hosting performance.",
-          "Install and configure essential software packages for website operation.",
         ],
       },
       skills: [
