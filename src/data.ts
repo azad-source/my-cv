@@ -131,7 +131,7 @@ export const data: IData = {
   ],
   experience: [
     {
-      position: "Frontend developer",
+      position: "Senior Frontend developer",
       company: "SKB Kontur (Auto)",
       date: "01/2023 – to Present",
       location: "remote",
@@ -303,7 +303,7 @@ export const data: IData = {
       ],
     },
     {
-      title: "Build and Styling Tools",
+      title: "Other technologies",
       items: [
         { name: "Webpack", progress: "60%", start: new Date("01.10.2022") },
         { name: "Vite", progress: "60%", start: new Date("01.10.2022") },
@@ -312,11 +312,6 @@ export const data: IData = {
           progress: "45%",
           start: new Date("02.01.2021"),
         },
-      ],
-    },
-    {
-      title: "Version Control and CI/CD",
-      items: [
         { name: "Git", progress: "80%", start: new Date("05.01.2019") },
         {
           name: "CI/CD gitlab",
