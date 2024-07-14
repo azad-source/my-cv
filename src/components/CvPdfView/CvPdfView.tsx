@@ -37,16 +37,20 @@ const filteredExperience = experience.filter(
 Font.register({ family: "Josefin-Sans-Regular", src: JosefinSansRegular });
 Font.register({ family: "Josefin-Sans-Bold", src: JosefinSansBold });
 
+const ColorScheme = {
+  mainColor: "#15ABAB",
+};
+
 const colors = {
   mainBgColor: "transparent",
-  headBgColor: "#15ABAB",
+  headBgColor: ColorScheme.mainColor,
   headTextColor: "rgba(122, 60, 52, 0.8)",
   mainTextColor: "rgba(0, 0, 0, 0.8)",
   secondaryTextColor: "rgba(0, 0, 0, 0.6)",
   thirdTextColor: "rgba(0, 0, 0, 0.4)",
   sectionTextColor: "rgba(101, 76, 79, 0.9)",
-  sectionTitleColor: "#15ABAB",
-  borderColor: "#15ABAB",
+  sectionTitleColor: ColorScheme.mainColor,
+  borderColor: ColorScheme.mainColor,
   linkColor: "rgba(30, 70, 130, 0.9)",
 };
 
