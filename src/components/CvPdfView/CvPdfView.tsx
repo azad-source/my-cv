@@ -3,7 +3,6 @@ import {
   Text,
   View,
   Link,
-  Image,
   Document,
   StyleSheet,
   Font,
@@ -14,7 +13,6 @@ import JosefinSansBold from "fonts/JosefinSans-Bold.ttf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const {
-  avatar,
   name,
   shortAbout,
   positionTitle,
