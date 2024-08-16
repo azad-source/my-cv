@@ -107,6 +107,7 @@ const styles = StyleSheet.create({
     color: colors.headTextColor,
   },
   headContacts: {
+    width: 450,
     fontSize: font.head4,
     display: "flex",
     flexDirection: "row",
@@ -296,9 +297,9 @@ export const CvPdfView = () => {
               ))}
             </View>
           </View>
-          <View style={styles.headAvatar}>
+          {/* <View style={styles.headAvatar}>
             <Image src={avatar} style={styles.headAvatarImage} />
-          </View>
+          </View> */}
         </View>
         <View style={styles.content}>
           <View style={styles.contentSection}>

@@ -82,7 +82,7 @@ export const data: IData = {
       degree: "Bachelor Of Engineering",
       fieldTitle: "Aircraft engines and power plants",
       establishment: "Samara State Aerospace University",
-      date: "09/2008 - 07/2011",
+      date: "09/2008 - 07/2012",
       location: "Samara, Russia",
       description: "",
     },
